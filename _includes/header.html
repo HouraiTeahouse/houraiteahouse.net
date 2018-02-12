@@ -1,0 +1,61 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">{{ site.title }}</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contribute</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        {% if site.discord %}
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/{{ site.discord }}">
+              <i class="fab fa-discord "></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if site.facebook %}
+          <li class="nav-item">
+            <a class="nav-link" href="https://facebook.com/{{ site.facebook }}">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if site.twitter %}
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/{{ site.twitter }}">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        {% endif %}
+        {% if site.github %}
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/{{ site.github }}">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>
