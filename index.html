@@ -8,6 +8,15 @@ layout: base
   </div>
 </div>
 <div class="container">
-  <h1> News </h1>
+  <h1 class="text-center"> Characters</h1>
+  {% for character in site.data.characters %}
+    {% cycle 'open': '<div class="row">', '', '', '' %}
+    <div class="col-md">
+      <img class="img-fluid" src="{{ character.chibi_img }}" alt="Card image">
+    </div>
+    {% cycle 'close': '', '', '', '</div>' %}
+  {% endfor %}
+  <br>
+  <h1 class="text-center"> News </h1>
   {% include news_list.html %}
 </div>

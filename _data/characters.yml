@@ -1,0 +1,24 @@
+- short_name: Reimu
+  full_name: Reimu Hakurei
+  chibi_img: img/characters/chibis/reimu.png
+- short_name: Marisa
+  full_name: Marisa Kirisame
+  chibi_img: img/characters/chibis/marisa.png
+- short_name: Youmu
+  full_name: Youmu Konpaku
+  chibi_img: img/characters/chibis/youmu.png
+- short_name: Sakuya
+  full_name: Sakuya Izayoi
+  chibi_img: img/characters/chibis/sakuya.png
+- short_name: Wriggle
+  full_name: Wriggle Nightbug
+  chibi_img: img/characters/chibis/wriggle.png
+- short_name: Yuuka
+  full_name: Yuuka Kazami
+  chibi_img: img/characters/chibis/yuuka.png
+- short_name: Yuugi
+  full_name: Yuugi Hoshiguma
+  chibi_img: img/characters/chibis/yuugi.png
+- short_name: Murasa
+  full_name: Minamitsu Murasa
+  chibi_img: img/characters/chibis/murasa.png
