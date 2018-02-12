@@ -1,6 +1,21 @@
 {% for post in site.posts %}
-
-  <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-  <h4>{{ post.date }}</h4>
-
+<div class="container py-3">
+  <div class="card border-primary mb-3">
+    <div class="row ">
+      <div class="col-md-3">
+        <img
+        src="https://placeholdit.imgix.net/~text?txtsize=38&amp;txt=200%C3%97200&amp;w=200&amp;h=200"
+        class="img-fluid">
+      </div>
+      <div class="col-md-9 px-3">
+        <div class="card-block px-3">
+          <h4 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p class="card-text">{{ post.date | date_to_long_string }}</p>
+          <p class="card-text">{{ post.excerpt }}</p>
+          <a href="{{ post.url }}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endfor %}
