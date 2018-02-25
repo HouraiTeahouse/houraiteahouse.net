@@ -23,7 +23,10 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-
+sass:
+  sass_dir: _sass
+  style: compressed
+  
 defaults:
   -
     scope:

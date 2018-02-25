@@ -1,0 +1,36 @@
+<article class="flex news">
+  <header class="flexitem news-title">
+    <h1> News </h1>
+  </header>
+  <ul class="flex flexitem list-news">
+    {% for post in site.posts %}
+    <li class="flex news-item">
+      <div class="flex flexitem news-flair">
+        <div class="flexitem square-box">
+          <div class="flexitem circular">
+            <div class="flex flexitem flair">
+              <div class="flexitem post-title">
+                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+              </div>
+              <div class="flexitem post-date">
+                <span>| {{ post.date | date_to_long_string }}</span>
+              </div>
+              {% if post == site.posts[0] %}
+              <img class="flexitem image" src="img/placeholder.png">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flexitem news-post">
+        <div class="row-fluid flexitem post-text">
+          <span>{{ post.excerpt }}</span>
+        </div>
+        <div class="row-fluid flexitem post-button">
+          <a href="{{ post.url }}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</article>

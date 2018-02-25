@@ -3,5 +3,5 @@ layout: base
 ---
 <div class="container">
 <h1>Latest News</h1>
-{% include news_list.html %}
+{% include news-list.html %}
 </div>

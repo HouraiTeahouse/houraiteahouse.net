@@ -1,22 +1,20 @@
 ---
 layout: base
 ---
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h2 class="display-3">Fantasy Crescendo</h1>
-    <p class="lead">A 2.5D platform fighting game by Touhou fans, for Touhou fans.</p>
-  </div>
-</div>
-<div class="container">
-  <h1 class="text-center"> Characters</h1>
-  {% for character in site.data.characters %}
-    {% cycle 'open': '<div class="row">', '', '', '' %}
-    <div class="col-md">
-      <img class="img-fluid" src="{{ character.chibi_img }}" alt="Card image">
+<div class="grid wrapper-content">
+  <section class="griditem jumbotron jumbotron-fluid splash">
+    <div class="flex overlay splash-text">
+      <div class="flexitem text">
+        <h1>FANTASY CRESCENDO</h1>
+        <h2>by Hourai Teahouse</h2>
+      </div>
     </div>
-    {% cycle 'close': '', '', '', '</div>' %}
-  {% endfor %}
-  <br>
-  <h1 class="text-center"> News </h1>
-  {% include news_list.html %}
+    <img class="splash-image" src="img/placeholder.png">
+  </section>
+  <section class="griditem container-fluid">
+    {% include character-roster.html %}
+  </section>
+  <section class="griditem container-fluid">
+    {% include news-list.html %}
+  </section>
 </div>

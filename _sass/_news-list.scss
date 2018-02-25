@@ -1,0 +1,134 @@
+.news {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, $background-gradient-top, $background-gradient-bottom);
+    overflow: hidden;
+    > .news-title {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid $border-primary;
+        z-index: 10;
+    }
+    > .list-news {
+        padding: 5%;
+        padding-top: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+    }
+    .news-item {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background: none;
+        .news-flair {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid red;
+            &:after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+            .square-box {
+                position: relative;
+                top: -50%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                border: 1px solid green;
+                &:after {
+                    content: "";
+                    display: block;
+                    padding-bottom: 100%;
+                }
+            }
+            .circular {
+                position: relative;
+                top: -50%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-radius: 100%;
+                overflow: hidden;
+                .flair {
+                    flex-direction: column;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: flex-start;
+                    align-items: center;
+                    align-content: flex-start;
+                    .post-title {
+                        padding: 2.5%;
+                        position: relative;
+                        width: 90%;
+                        text-align: center;
+                        z-index: 10;
+                        a {
+                            text-decoration: none;
+                            color: $font-color-primary;
+                            &:hover {
+                                cursor: pointer;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .post-date {
+                        padding: 2.5%;
+                        position: relative;
+                        z-index: 10;
+                    }
+                    .image {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                        opacity:0.5;
+                    }
+                }
+                .news-post {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    jusitfy-self: flex-end;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-size: 12px;
+                    background: none;
+                    z-index: 10;
+                    .post-text {
+
+                    }
+                    .post-button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 576px) {
+    .news {
+    }
+}
