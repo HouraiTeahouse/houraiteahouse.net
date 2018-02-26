@@ -1,0 +1,12 @@
+language: ruby
+cache: bundler
+install:
+  - bundle install
+script:
+  - bundle exec JEKYLL_ENV=prod jekyll build
+deploy:
+  - provider: script
+    script: curl -i -X POST ${DEPLOY_BASE_URL}?token=$TOKEN
+    skip_cleanup: true
+    on:
+      branch: master
