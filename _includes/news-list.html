@@ -3,11 +3,7 @@
     <h1> News </h1>
   </header>
   <ul class="flex flexitem list-news">
-    {% assign index = 0 %}
     {% for post in site.posts %}
-    {% if index >= 3 %}
-    {% break %}
-    {% endif %}
     <li class="flex news-post">
       <article class="flexitem post-content">
         <header class="grid">
@@ -37,7 +33,6 @@
         </div>
       </article>
     </li>
-    {% assign++ %}
     {% endfor %}
   </ul>
 </article>
