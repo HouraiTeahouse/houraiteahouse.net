@@ -5,124 +5,108 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background: linear-gradient(180deg, $background-gradient-top, $background-gradient-bottom);
+    background: $background-gradient;
     overflow: hidden;
     > .news-title {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid $border-primary;
-        z-index: 10;
+        h1 {
+            padding: 2.5%;
+            font-size: 2.25em;
+            font-weight: 700;
+        }
     }
     > .list-news {
-        padding: 5%;
-        padding-top: 0;
+        padding-left: 10%;
+        padding-right: 10%;
         width: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         list-style-type: none;
     }
-    .news-item {
+    .news-post {
         position: relative;
         width: 100%;
-        min-height: 300px;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         background: none;
-        .news-flair {
-            position: absolute;
-            top: 0;
+        > .post-content {
             width: 100%;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid red;
-            &:after {
-                content: "";
-                display: block;
-                padding-bottom: 100%;
+            height: 100%;
+            header {
+                grid-template-rows: min-content;
+                grid-template-columns: min-content;
+                justify-content: center;
             }
-            .square-box {
+            .post-header {
+                grid-row-start: 0;
+                grid-row-end: 1;
+                grid-column-start: 2;
+                gird-column-start: 3;
                 position: relative;
-                top: -50%;
-                left: 0;
+                padding-top: 10%;
+                padding-bottom: 25%;
                 width: 100%;
                 flex-direction: column;
                 align-items: center;
-                overflow: hidden;
-                border: 1px solid green;
-                &:after {
-                    content: "";
-                    display: block;
-                    padding-bottom: 100%;
+                .post-title {
+                    position: relative;
+                    left: 0;
+                    padding-bottom: 10px;
+                    width: 100%;
+                    text-align: center;
+                    a {
+                        text-decoration: none;
+                        color: $font-color-primary;
+                    }
+                }
+                .post-date {
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
                 }
             }
-            .circular {
-                position: relative;
-                top: -50%;
-                left: 0;
+            .post-flair {
+                grid-row-start: 0;
+                grid-row-end: 1;
+                grid-column-start: 2;
+                gird-column-start: 3;
+                position: absolute;
                 width: 100%;
-                height: 100%;
-                background: none;
-                border-radius: 100%;
-                overflow: hidden;
-                .flair {
-                    flex-direction: column;
+                justify-self: center;
+                &:after {
+                    display: block;
+                    content: "";
+                    padding-bottom: 100%;
+                }
+                .image-border {
                     position: absolute;
-                    top: 50%;
+                    top: -50%;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    justify-content: flex-start;
-                    align-items: center;
-                    align-content: flex-start;
-                    .post-title {
-                        padding: 2.5%;
-                        position: relative;
-                        width: 90%;
-                        text-align: center;
-                        z-index: 10;
-                        a {
-                            text-decoration: none;
-                            color: $font-color-primary;
-                            &:hover {
-                                cursor: pointer;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                    .post-date {
-                        padding: 2.5%;
-                        position: relative;
-                        z-index: 10;
-                    }
-                    .image {
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: 0;
-                        opacity:0.5;
-                    }
+                    overflow: hidden;
                 }
-                .news-post {
-                    position: absolute;
-                    bottom: 0;
+                .image {
+                    position: relative;
+                    top: 50%;
+                    justify-self: center;
                     width: 100%;
                     height: 100%;
-                    jusitfy-self: flex-end;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    font-size: 12px;
-                    background: none;
-                    z-index: 10;
-                    .post-text {
+                }
+            }
+            .post-body {
+                flex-direction: column;
+                justify-content: center;
+                .post-text {
 
-                    }
-                    .post-button {
-                        width: 100%;
-                    }
+                }
+                .post-button {
+                    align-self: flex-end;
                 }
             }
         }
