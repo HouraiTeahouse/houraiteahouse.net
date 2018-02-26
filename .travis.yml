@@ -1,9 +1,11 @@
 language: ruby
 cache: bundler
+env:
+  - JEKYLL_ENV=prod
 install:
   - bundle install
 script:
-  - bundle exec JEKYLL_ENV=prod jekyll build
+  - bundle exec jekyll build
 deploy:
   - provider: script
     script: curl -i -X POST ${DEPLOY_BASE_URL}?token=$TOKEN
