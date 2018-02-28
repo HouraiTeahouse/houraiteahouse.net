@@ -1,11 +1,11 @@
-<article class="flex news">
-  <header class="flexitem news-title">
-    <h1> News </h1>
+<article class="container-fluid news">
+  <header class="row news-title">
+    <h1 class="col-12"> News </h1>
   </header>
-  <ul class="flex flexitem list-news">
+  <ul class="row list-news">
     {% for post in site.posts %}
-    <li class="flex news-post">
-      <article class="flexitem post-content">
+    <li class="col-md-10 news-post">
+      <article class="row no-gutters post-content">
         <header class="grid">
           {% if post == site.posts[0] %}
           <div class="griditem post-flair">
