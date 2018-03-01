@@ -5,7 +5,7 @@
   <ul class="row list-news">
     {% for post in site.posts %}
     <li class="col-md-10 news-post">
-      <section class="row-fluid post-content">
+      <section class="row post">
         {% if post == site.posts[0] %}
         <div class="col-sm-3 post-flair">
           <div class="rounded-circle image-border">
@@ -13,20 +13,17 @@
           </div>
         </div>
         {% endif %}
-        <div class="col-sm-9 post-header">
-          <div class="row-fluid post-title">
-            <h3 class="col-12 title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="col-sm-9 post-content">
+          <div class="row post-header">
+            <div class="col-sm-6 post-title">
+              <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            </div>
+            <div class="col-sm-6 post-date">
+              <span class="date">{{ post.date | date_to_long_string }}</span>
+            </div>
           </div>
-          <div class="row-fluid post-date">
-            <span class="col-12 date">| {{ post.date | date_to_long_string }}</span>
-          </div>
-        </div>
-        <div class="row-fluid post-body">
-          <div class="flexitem post-text">
-            <span>{{ post.excerpt }}</span>
-          </div>
-          <div class="flexitem post-button">
-            <a class="btn btn-primary" href="{{ post.url }}">Read More...</a>
+          <div class="row post-body">
+              <span>{{ post.excerpt }}</span>
           </div>
         </div>
       </section>
