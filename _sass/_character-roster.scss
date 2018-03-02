@@ -1,9 +1,11 @@
 // Mobile css
 .character-roster {
+    display: flex;
     padding: 2.5%;
     flex-direction: column;
     border-bottom: 1px solid $border-primary;
     > .title {
+        margin: 0;
         padding-left: 2.5%;
         font-size: $font-size-mobile;
         flex-basis: 0;
