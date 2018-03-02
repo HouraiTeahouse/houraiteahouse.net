@@ -1,11 +1,13 @@
 // Mobile css
 .wrapper-content {
+    margin: 0;
+    padding: 0;
     template-grid-rows: 100vh 1fr 1fr;
     background: $background-primary;
     color: $font-color-primary;
-    .griditem {
+    .container-fluid {
+        margin: 0;
         padding: 0;
-        width: 100%;
     }
     .splash {
         position: relative;
