@@ -6,3 +6,27 @@ layout: base
     <h2 class="display-3">FAQ</h1>
   </div>
 </div>
+<div class="container">
+  <div id="accordion">
+  {% for frequent_question in site.data.faq %}
+    <div class="card">
+      <div class="card-header" id="question-{{ forloop.index }}">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse"
+            data-target="#collapse-{{ forloop.index }}" aria-expanded="false"
+            aria-controls="collapse-{{ forloop.index }}">
+            {{ frequent_question.question }}
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapse-{{ forloop.index }}" class="collapse"
+        aria-labelledby="question-{{ forloop.index}}" data-parent="#accordion">
+        <div class="card-body">
+          {{ frequent_question.answer }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
