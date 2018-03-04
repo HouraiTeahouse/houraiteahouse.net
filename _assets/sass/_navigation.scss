@@ -1,4 +1,40 @@
 nav {
-    background: $background-primary;
-    z-index: 100;
+  background: $background-primary;
+  z-index: 100;
+}
+
+.navbar-brand {
+  color: $nav-text
+}
+
+.nav-link {
+  color: $nav-text
+}
+
+.nav-icon {
+  color: $nav-menu-icon;
+}
+
+.navbar-brand:active {
+  color: $nav-highlight;
+}
+
+.nav-link:active {
+  color: $nav-highlight;
+}
+
+.nav-icon:active {
+  color: $nav-highlight;
+}
+
+.navbar-brand:hover {
+  color: $nav-highlight;
+}
+
+.nav-link:hover {
+  color: $nav-highlight;
+}
+
+.nav-icon:hover {
+  color: $nav-highlight;
 }
