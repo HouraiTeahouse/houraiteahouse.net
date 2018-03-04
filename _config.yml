@@ -31,6 +31,7 @@ assets:
 markdown: kramdown
 plugins:
   - bootstrap
+  - font-awesome-sass
   - jekyll-assets
   - jekyll-feed
   - jekyll-sitemap

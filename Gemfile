@@ -19,6 +19,7 @@ gem "uglifier", "~> 4.1.3"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "bootstrap", "~> 4.0.0"
+  gem "font-awesome-sass", "~> 5.0.6.2"
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-sitemap", "~> 1.2.0"
   gem "jekyll-multiple-languages-plugin", "~> 1.5.0"
