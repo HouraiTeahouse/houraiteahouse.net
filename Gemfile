@@ -10,6 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 3.7.2"
 
+gem "uglifier", "~> 4.1.3"
+
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
@@ -19,6 +21,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-sitemap", "~> 1.2.0"
   gem "jekyll-multiple-languages-plugin", "~> 1.5.0"
+  gem "jekyll-assets", "~> 3.0.7"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -6,7 +6,7 @@
     {% for character in site.data.characters %}
       {% cycle 'open': '<ul class="flex list-characters">', '', '', '' %}
       <li class="flexitem character">
-        <img class="image" src="{{ character.chibi_img }}" alt="Card image">
+        {% asset '{{ character.chibi_img }}' class="image" %}
       </li>
       {% cycle 'close': '', '', '', '</ul>' %}
     {% endfor %}

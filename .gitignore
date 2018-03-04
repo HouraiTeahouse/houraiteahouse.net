@@ -2,3 +2,4 @@ _site
 psd
 .sass-cache
 .jekyll-metadata
+.jekyll-cache

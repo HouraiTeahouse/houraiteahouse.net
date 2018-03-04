@@ -19,17 +19,21 @@ github: HouraiTeahouse
 
 # Localization Settings
 languages: ["en", "es", "fr", "de", "jp"]
-exclude_from_localizations: ["img", "css", "_sass"]
+
+# Asset Settings
+assets:
+  sources:
+    - _assets/img
+    - _assets/css
+    - _assets/sass
 
 # Build settings
 markdown: kramdown
 plugins:
+  - jekyll-assets
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-multiple-languages-plugin
-sass:
-  sass_dir: _sass
-  style: compressed
 
 defaults:
   -
