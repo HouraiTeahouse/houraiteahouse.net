@@ -1,0 +1,19 @@
+.border-pink {
+  border-style: solid;
+  border-color: $border-primary;
+  border-width: 3px;
+}
+
+.border-navy {
+  border-style: solid;
+  border-color: $border-secondary;
+  border-width: 3px;
+}
+
+.background-gradient {
+  background-color: $background-gradient;
+}
+
+.red-gradient-bg {
+  background-color: $red-gradient;
+}
