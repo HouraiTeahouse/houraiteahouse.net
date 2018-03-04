@@ -2,34 +2,31 @@
 layout: base
 ---
 
-<div class="container">
-  <div class="row">
+<div class="container about-blurb-container border-pink">
+  <div class="row about-blurb-content">
     <div class="col-xl-8">
       <h2>{{ site.title }}</h2>
       <p>
-        <b>Hourai Teahouse</b> is a western doujinsoft circle focusing on
+      <b>{{ site.title }}</b> is a western doujinsoft circle focusing on
         creating free and open source video games and video game development
         software.
       </p>
     </div>
-    <div class="col-xl-4">
-      <button class="mr-auto">{% t nav.contribute %}</button>
+    <div class="col-xl-4 border-navy red-gradient-bg">
+      <a  href="/contribute" role="button">
+        <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+          <span class="text-center">{% t nav.contribute %}</span>
+        </div>
+      </a>
     </div>
   </div>
-</div>
-<div class="jumbotron">
 </div>
 <div class="container">
   <h1 class="text-center">Contributors</h1>
   <div class="row justify-content-md-center">
   {% for contributor in site.data.contributors %}
     <div class="col-md-4">
-      <div class="card">
-        {% asset placeholder class="card-img-top" %}
-        <div class="card-body">
-          <h3 class="text-center card-title">{{ contributor }}</h3>
-        </div>
-      </div>
+      <h3 class="text-center card-title">{{ contributor }}</h3>
     </div>
   {% endfor %}
   </div>
