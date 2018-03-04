@@ -30,6 +30,7 @@ assets:
 # Build settings
 markdown: kramdown
 plugins:
+  - font-awesome-sass
   - jekyll-assets
   - jekyll-feed
   - jekyll-sitemap
