@@ -30,6 +30,7 @@ assets:
 # Build settings
 markdown: kramdown
 plugins:
+  - bootstrap
   - jekyll-assets
   - jekyll-feed
   - jekyll-sitemap

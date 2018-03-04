@@ -2,6 +2,11 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@charset "utf-8";
+
+// Bootstrap Base
+@import "bootstrap";
+
 // SASS defined variables
 @import "definitions";
 
