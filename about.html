@@ -1,0 +1,36 @@
+---
+layout: base
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-8">
+      <h2>{{ site.title }}</h2>
+      <p>
+        <b>Hourai Teahouse</b> is a western doujinsoft circle focusing on
+        creating free and open source video games and video game development
+        software.
+      </p>
+    </div>
+    <div class="col-xl-4">
+      <button class="mr-auto">{% t nav.contribute %}</button>
+    </div>
+  </div>
+</div>
+<div class="jumbotron">
+</div>
+<div class="container">
+  <h1 class="text-center">Contributors</h1>
+  <div class="row justify-content-md-center">
+  {% for contributor in site.data.contributors %}
+    <div class="col-md-4">
+      <div class="card">
+        {% asset placeholder class="card-img-top" %}
+        <div class="card-body">
+          <h3 class="text-center card-title">{{ contributor }}</h3>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
