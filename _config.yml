@@ -17,16 +17,20 @@ facebook: HouraiTeahouse
 twitter: HouraiTeahouse
 github: HouraiTeahouse
 
+# Localization Settings
+languages: ["en", "es", "fr", "de", "jp"]
+exclude_from_localizations: ["img", "css", "_sass"]
 
 # Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-multiple-languages-plugin
 sass:
   sass_dir: _sass
   style: compressed
-  
+
 defaults:
   -
     scope:

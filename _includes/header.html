@@ -11,25 +11,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">
+            {% t nav.home %}
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/about">{% t nav.about %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/news">News</a>
+          <a class="nav-link" href="/news">{% t nav.news %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/projects">Projects</a>
+          <a class="nav-link" href="/projects">{% t nav.projects %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/faq">{% t nav.faq %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contribute">Contribute</a>
+          <a class="nav-link" href="/contribute">{% t nav.contribute %}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://wiki.houraiteahouse.net">Wiki</a>
+          <a class="nav-link" href="https://wiki.houraiteahouse.net">
+            {% t nav.wiki %}
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav">
