@@ -21,12 +21,51 @@ layout: base
     </div>
   </div>
 </div>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h2>Open Source Projects</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 border-pink">
+      Project 1
+    </div>
+    <div class="col-md-4 border-pink">
+      Project 2
+    </div>
+    <div class="col-md-4">
+      {% asset characters/chibis/yuuka class="img-responsive" width="200"
+      height="200" %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      {% asset characters/chibis/marisa class="img-responsive" width="200"
+      height="200" %}
+    </div>
+    <div class="col-md-4 border-pink">
+      Project 3
+    </div>
+    <div class="col-md-4 border-pink">
+      Project 4
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 border-pink">
+      Project 5
+    </div>
+    <div class="col-md-4 border-pink">
+      Project 6
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
 <div class="container">
   <h1 class="text-center">Contributors</h1>
   <div class="row justify-content-md-center">
   {% for contributor in site.data.contributors %}
     <div class="col-md-4">
-      <h3 class="text-center card-title">{{ contributor }}</h3>
+      <h3 class="text-center">{{ contributor }}</h3>
     </div>
   {% endfor %}
   </div>
