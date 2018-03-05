@@ -13,13 +13,18 @@
    </h1>
   </header>
   <ul class="row list-news">
-    {% assign post_size = site.posts | size %}
-    {% if post_size == 0 %} 
-      <p>No posts...yet.</p>
+  {% assign post_size = site.posts | size %}
+  {% if post_size == 0 %} 
+    <p>No posts...yet.</p>
+  {% else %}
+  {% for post in site.posts %}
+    {% if page.path == "news.md" and post == site.posts[0] %}
+    <li class="col-md-10 news-post-top">
+      <section class="row-fluid post gradient-background">
     {% else %}
-    {% for post in site.posts %}
     <li class="col-md-10 news-post">
       <section class="row post">
+    {% endif %}
         {% if post == site.posts[0] %}
         <div class="col-sm-3 post-flair">
           <div class="rounded-circle image-border">

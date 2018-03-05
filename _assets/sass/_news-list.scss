@@ -28,12 +28,13 @@
         justify-content: center;
         list-style-type: none;
     }
-    .news-post {
+    [class*="news-post"] {
         padding-left: 25px;
         padding-right: 25px;
         align-items: center;
         justify-content: center;
         > .post {
+            position: relative;
             padding-top: 5%;
             padding-bottom: 5%;
             max-height: 350px;
@@ -120,7 +121,7 @@
 }
 @media only screen and (min-width: 576px) {
     .news {
-        .news-post {
+        [class*="news-post"] {
             padding-left: 25px;
             padding-right: 25px;
             align-items: center;
@@ -179,4 +180,8 @@
 }
 .gradient-background {
     background: $background-gradient;
+}
+.news-post-top {
+    width: 100%;
+    padding: 0;
 }
