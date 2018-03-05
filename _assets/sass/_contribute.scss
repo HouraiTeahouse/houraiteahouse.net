@@ -1,0 +1,105 @@
+.cont-head {
+	padding-left: 10px;
+}
+
+.cont-info {
+	padding-bottom: 10px;
+
+    p {
+	    font-size: $font-size-default;
+	}
+}
+
+.cont-social {
+    border-top: 1px solid $border-primary;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
+    
+    .col-sm-7 {
+    	display: flex;
+    	align-items: center;
+		padding-left: 0;
+		> p {
+			margin-bottom: 0;
+		}
+    }
+    
+    .col-sm-5 {
+    	display: flex;
+    	align-items: center;
+		padding-right: 0;
+   	}
+
+    .nav-icon {
+        color: white;
+    }
+    
+    p {
+	    font-size: $font-size-default;
+	    font-weight: bold;
+	}
+    
+    ul {
+      padding: 0;
+    }
+    
+    li {
+    	display: inline-block;
+    	list-style-type: none;
+    	padding-right: 15px;
+    	
+    	> a {
+    		padding: 0;
+    	}
+    }
+}
+
+.cont-role {
+    p {
+	    font-size: $font-size-default;
+	}
+
+	button {
+	    background: $red-gradient;
+	    border: 5px solid $border-secondary;
+	    color: white;
+	    font-size: $font-size-default;
+	    font-weight: bold;
+	    padding: 15px 15px 15px 15px;
+	    max-width: 100%;
+	    width: 100%;
+	    height: 120px;
+	    margin-bottom: 25px;	    
+	}
+	
+	.terms {
+		overflow: hidden;
+		float: right;
+		label.checkbox-label input[type=checkbox] {
+			position: relative;
+			vertical-align: middle;
+		}
+		input {
+			margin-top: 2px;
+			margin-right: 2px;
+			float: left;
+		}
+	}
+}
+
+.cont-submit {
+    float: right;
+	button {
+	    float: right;
+        background: $border-primary;
+        border: none;
+        color: white;
+        font-size: $font-size-default;
+        max-width: 50%;
+        width: 50;
+        height: 60px;
+        padding: 10px;
+    }
+}
