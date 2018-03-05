@@ -1,5 +1,25 @@
 <footer class="footer">
   <div class="container footer-content">
-    <span>&copy; Hourai Teahouse 2015-{{"now" | date: "%Y" }}</span>
+      <span>
+        Language:
+        <div class="btn-group dropup">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {% t `{{ site.lang }}` %}
+          </button>
+          <div class="dropdown-menu">
+            {% for lang in site.languages %}
+            {% if lang == "en" %}
+            {% capture link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+            {% else %}
+            {% capture link %}{{ site.baseurl_root }}{{ lang }}{{ page.url}}{% endcapture %}
+            {% endif %}
+            <a class="dropdown-item" href="{{ link }}">
+              {% t `{{ lang }}` %}
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </span>
+      <span class="float-right">&copy; Hourai Teahouse 2015-{{"now" | date: "%Y" }}</span>
   </div>
 </footer>
