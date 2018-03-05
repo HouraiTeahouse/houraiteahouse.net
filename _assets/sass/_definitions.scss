@@ -10,7 +10,18 @@ $button-background              : rgb(203, 131, 194);
 $button-gradient-top            : rgb(186, 20, 137);
 $button-gradient-mid            : rgb(177, 31, 91);
 $button-gradient-bottom         : rgb(209, 52, 52);
+$button-gradient                : linear-gradient(180deg, $background-gradient-top, $background-gradient-bottom);
 $button-gradient-border         : rgb(59, 59, 69);
+$red-gradient-top				: rgb(186, 20, 137);
+$red-gradient-mid				: rgb(177, 31, 91);
+$red-gradient-bottom 			: rgb(209, 52, 52);
+$red-gradient					: linear-gradient(180deg, $red-gradient-top, $red-gradient-mid, $red-gradient-bottom);
+
+$red-gradient-top                : rgb(186, 20, 137);
+$red-gradient-mid                : rgb(177, 31, 91);
+$red-gradient-bottom             : rgb(209, 52, 52);
+$red-gradient                    : linear-gradient(180deg, $red-gradient-top,
+$red-gradient-mid, $red-gradient-bottom);
 
 // Font definitions:
 $font-size-default              : 24px;
