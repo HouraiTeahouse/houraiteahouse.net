@@ -29,8 +29,7 @@
         list-style-type: none;
     }
     [class*="news-post"] {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding: 0;
         align-items: center;
         justify-content: center;
         > .post {
@@ -122,10 +121,6 @@
 @media only screen and (min-width: 576px) {
     .news {
         [class*="news-post"] {
-            padding-left: 25px;
-            padding-right: 25px;
-            align-items: center;
-            justify-content: center;
             > .post {
                 max-height: 400px;
                 align-items: flex-start;
@@ -180,8 +175,4 @@
 }
 .gradient-background {
     background: $background-gradient;
-}
-.news-post-top {
-    width: 100%;
-    padding: 0;
 }
