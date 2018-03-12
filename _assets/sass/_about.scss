@@ -2,7 +2,21 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 .about-blurb-content {
   padding: 50px;
+}
+.about-grid-image {
+    display: none;
+}
+.about-grid-item {
+    padding-bottom: 25px;
+    > .about-item-content {
+        height: 175px;
+        background: $background-secondary;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .about-grid-image {
+        display: flex;
+    }
 }

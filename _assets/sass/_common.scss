@@ -3,17 +3,25 @@
   border-color: $border-primary;
   border-width: 3px;
 }
-
 .border-navy {
   border-style: solid;
   border-color: $border-secondary;
   border-width: 3px;
 }
-
 .background-gradient {
   background-image: $background-gradient;
 }
-
 .red-gradient-bg {
   background-image: $red-gradient;
+}
+
+@media only screen and (min-width: 768px) {
+  .no-gutter-md-right {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .no-gutter-md-left {
+      padding-left: 0;
+      margin-left: 0;
+  }
 }
