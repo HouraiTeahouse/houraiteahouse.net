@@ -7,7 +7,6 @@
     align-content: center;
     justify-content: center;
     box-sizing: border-box;
-    background: $background-gradient;
     overflow: hidden;
     > .news-title {
         margin: 0;
@@ -29,12 +28,12 @@
         justify-content: center;
         list-style-type: none;
     }
-    .news-post {
-        padding-left: 25px;
-        padding-right: 25px;
+    [class*="news-post"] {
+        padding: 0;
         align-items: center;
         justify-content: center;
         > .post {
+            position: relative;
             padding-top: 5%;
             padding-bottom: 5%;
             max-height: 350px;
@@ -121,11 +120,7 @@
 }
 @media only screen and (min-width: 576px) {
     .news {
-        .news-post {
-            padding-left: 25px;
-            padding-right: 25px;
-            align-items: center;
-            justify-content: center;
+        [class*="news-post"] {
             > .post {
                 max-height: 400px;
                 align-items: flex-start;
@@ -177,4 +172,7 @@
             }
         }
     }
+}
+.gradient-background {
+    background: $background-gradient;
 }

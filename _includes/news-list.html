@@ -1,11 +1,30 @@
+{% if page.path == "index.html" %}
+<article class="container-fluid news gradient-background">
+{% else %}
 <article class="container-fluid news">
+{% endif %}
   <header class="row news-title">
-    <h1 class="col-12"> News </h1>
+    <h1 class="col-12">
+    {% if page.path == "news.md" %}
+      Hourai Teahouse - News
+    {% else %}
+      News
+    {% endif %}
+   </h1>
   </header>
   <ul class="row list-news">
-    {% for post in site.posts %}
-    <li class="col-md-10 news-post">
-      <section class="row post">
+  {% assign post_size = site.posts | size %}
+  {% if post_size == 0 %} 
+    <p>No posts...yet.</p>
+  {% else %}
+  {% for post in site.posts %}
+    {% if page.path == "news.md" and post == site.posts[0] %}
+    <li class="col-md-12 news-post-top">
+      <section class="row-fluid post gradient-background">
+    {% else %}
+    <li class="col-md-12 news-post">
+      <section class="row-fluid post">
+    {% endif %}
         {% if post == site.posts[0] %}
         <div class="col-sm-3 post-flair">
           <div class="rounded-circle image-border">
@@ -22,8 +41,8 @@
               <span class="date">{{ post.date | date_to_long_string }}</span>
             </div>
           </div>
-          <div class="row post-body">
-              <span>{{ post.excerpt }}</span>
+          <div class="col-sm-12 post-body">
+              {{ post.excerpt }}
           </div>
         </div>
       </section>
@@ -33,4 +52,5 @@
   <div class="col-md-10 offset-md-1 news-button">
       <button>More news</button>
   </div>
+  {% endif %}
 </article>
