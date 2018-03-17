@@ -1,14 +1,11 @@
-<article class="flex character-roster">
-    <header class="flexitem title">
-        <h1>Fantasy Crescendo Fighters</h1>
-    </header>
-    <section class="flex flexitem images">
+<article class="container roster">
+    <section class="row roster-set">
     {% for character in site.data.characters %}
-      {% cycle 'open': '<ul class="flex list-characters">', '', '', '' %}
-      <li class="flexitem character">
+      {% cycle 'open': '<ul class="col-md-3 roster-list">', '', %}
+      <li class="roster-character">
         {% asset '{{ character.chibi_img }}' class="image" %}
       </li>
-      {% cycle 'close': '', '', '', '</ul>' %}
+      {% cycle 'close': '', '</ul>' %}
     {% endfor %}
     </section>
 </article>

@@ -1,61 +1,37 @@
 // Mobile css
-.character-roster {
-    display: flex;
+.roster {
     padding: 2.5%;
     flex-direction: column;
     border-bottom: 1px solid $border-primary;
-    > .title {
-        margin: 0;
-        padding-left: 2.5%;
-        font-size: $font-size-mobile;
-        flex-basis: 0;
-        text-align: center;
-        justify-self: center;
-        align-self: center;
+}
+.roster-set {
+    margin: 0;
+    padding: 15px;
+}
+.roster-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.roster-character {
+    margin: 15px;
+    background: $background-secondary;
+    border: 3px solid $border-primary;
+    &:hover {
+        cursor: pointer;
     }
-    .images {
-        flex-direction: row;
-        > .list-characters {
-            padding: 0;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .character {
-            position: relative;
-            margin: 10px;
-            background: $background-secondary;
-            border: 3px solid $border-primary;
-            &:hover {
-                cursor: pointer;
-            }
-            .image {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-    ul {
-        list-style-type: none;
+    .image {
+        width: 100%;
     }
 }
-@media only screen and (min-width: 850px) {
-    .character-roster {
-        > .title {
-            font-size: $font-size-default;
-            text-align: left;
-        }
-        flex-direction: row-reverse;
-        .images {
-            flex-direction: column;
-            > .list-characters {
-                flex-direction: row;
-            }
-            .character {
-                max-width: 400px;
-                max-height: 400px;
-            }
-        }
+@media only screen and (min-width: 768px) {
+    .roster-list {
+        flex-direction: column;
+    }
+    .roster-character {
+        max-width: 400px;
+        max-height: 400px;
     }
 }

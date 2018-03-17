@@ -1,10 +1,10 @@
 ---
 layout: base
 ---
-<div class="container-fluid wrapper-content">
-  <section class="jumbotron-fluid splash">
-    <div class="flex overlay splash-text">
-      <div class="flexitem text">
+<div class="container-fluid wrapper-home">
+  <section class="jumbotron-fluid home-splash">
+    <div class="row overlay home-splash-text align-items-end justify-content-end">
+      <div class="col text">
         <h1>FANTASY CRESCENDO</h1>
         <h2>by Hourai Teahouse</h2>
       </div>
@@ -12,7 +12,16 @@ layout: base
     {% asset placeholder class="splash-image" %}
   </section>
   <section class="container-fluid">
-    {% include character-roster.html %}
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-4 roster-title order-md-4">
+        <div class="row-fluid justify-content-start">
+            <h1>Fantasy Crescendo Fighters</h1>
+        </div>
+      </div>
+      <div class="col-md-8">
+        {% include character-roster.html %}
+      </div>
+    </div>
   </section>
   <section class="container-fluid">
     {% include news-list.html %}
