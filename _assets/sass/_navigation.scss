@@ -1,39 +1,36 @@
 nav {
   z-index: 100;
 }
-
+.navigation-icons {
+  width: 100%;
+  @media only screen and (min-width: 768px) {
+    width: auto;
+  }
+}
 .navbar-brand {
   color: $nav-text
 }
-
 .nav-link {
   color: $nav-text
 }
-
 .nav-icon {
   color: $nav-menu-icon;
 }
-
 .navbar-brand:active {
   color: $nav-highlight;
 }
-
 .nav-link:active {
   color: $nav-highlight;
 }
-
 .nav-icon:active {
   color: $nav-highlight;
 }
-
 .navbar-brand:hover {
   color: $nav-highlight;
 }
-
 .nav-link:hover {
   color: $nav-highlight;
 }
-
 .nav-icon:hover {
   color: $nav-highlight;
 }

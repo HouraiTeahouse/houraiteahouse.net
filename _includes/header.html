@@ -1,13 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-inverse">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      {% asset logo width="30" height="30" %}
-      {{ site.title }}
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+  <div class="container justify-content-start">
+    <div class="row flex-nowrap justify-content-between navigation-icons">
+      <a class="navbar-brand" href="/">
+        {% asset logo width="30" height="30" %}
+        {{ site.title }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
