@@ -14,14 +14,14 @@
 
 // Patterns
 @import "body";
+@import "common";
 
 // Sections
 @import "about";
-@import "body";
-@import "common";
-@import "navigation";
+@import "character-roster";
+@import "contribute";
+@import "fantasy-crescendo.project";
 @import "footer";
 @import "homepage";
-@import "character-roster";
+@import "navigation";
 @import "news-list";
-@import "contribute";

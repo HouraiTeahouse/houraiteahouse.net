@@ -1,8 +1,6 @@
 // Mobile css
 .roster {
     padding: 2.5%;
-    flex-direction: column;
-    border-bottom: 1px solid $border-primary;
 }
 .roster-set {
     margin: 0;
@@ -17,14 +15,15 @@
 }
 .roster-character {
     margin: 15px;
-    background: $background-secondary;
-    border: 3px solid $border-primary;
-    &:hover {
+        &:hover {
         cursor: pointer;
     }
     .image {
         width: 100%;
     }
+}
+.roster-character-background {
+    background: rgba(46, 48, 70, .25);
 }
 @media only screen and (min-width: 768px) {
     .roster-list {

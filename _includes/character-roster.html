@@ -2,9 +2,13 @@
     <section class="row roster-set">
     {% for character in site.data.characters %}
       {% cycle 'open': '<ul class="col-md-3 roster-list">', '', %}
-      <li class="roster-character">
+        {% if page.path == "index.html" %}
+            <li class="roster-character background-navy border-pink">
+        {% else %}
+            <li class="roster-character roster-character-background border-navy">
+        {% endif %}    
         {% asset '{{ character.chibi_img }}' class="image" %}
-      </li>
+            </li>
       {% cycle 'close': '', '</ul>' %}
     {% endfor %}
     </section>

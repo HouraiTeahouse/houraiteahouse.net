@@ -1,3 +1,4 @@
 ---
-layout: under_construction
+layout: base
 ---
+{% include fantasy-crescendo.project.html %}
