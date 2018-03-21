@@ -1,5 +1,7 @@
 // Mobile CSS
 [class*="wrapper-"] {
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -19,6 +21,9 @@
   height: 100%;
   z-index: 0;
 }
+.background-pink {
+  background: $border-primary;
+}
 .background-navy {
   background: $background-secondary;
 }
@@ -31,6 +36,16 @@
   border-style: solid;
   border-color: $border-secondary;
   border-width: 3px;
+}
+.border-thin-pink {
+  border-style: solid;
+  border-color: $border-primary;
+  border-width: 1px;
+}
+.border-thin-navy {
+  border-style: solid;
+  border-color: $border-secondary;
+  border-width: 1px;
 }
 .background-gradient {
   background-image: $background-gradient;

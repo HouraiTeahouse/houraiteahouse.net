@@ -1,96 +1,123 @@
 ---
 layout: base
 ---
-<div class="container">
-  <h2 class="display-3 cont-head">Contribute</h2>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="row">
-    	<div class="cont-info">
-  		  <p>Community contributions continue to keep Hourai Teahouse's
-		  ticking.</p>
-	    </div>
-	    <div class="container cont-social">
-	      <div class="row">
-		    <div class="col-sm-7">
-		      <p>Chat with us on Discord</p>
-	        </div>
-	        <div class="col-sm-5 discord">
-	          <a class="nav-link nav-icon" href="https://discord.gg/VuZhs9V">
-			    <i class="fab fa-discord fa-5x"></i>
-			  </a>
-	        </div>
-	      </div>
-	    </div>
-	    <div class="cont-social">
-	      <p>And follow us</p>
-	      <span>
-		    <ul>
-		      <li><a class="nav-link nav-icon" href="https://www.youtube.com/HouraiTeahouse">
-		        <i class="fab fa-youtube fa-5x"></i>
- 		      </a></li>
-		      <li><a class="nav-link nav-icon" href="https://facebook.com/HouraiTeahouse">
-	            <i class="fab fa-facebook fa-5x"></i>
-	          </a></li>
-	          <li><a class="nav-link nav-icon" href="https://twitter.com/HouraiTeahouse">
-	            <i class="fab fa-twitter fa-5x"></i>
-	          </a></li>
-	          <li><a class="nav-link nav-icon" href="https://hourai-teahouse.tumblr.com/">
-	            <i class="fab fa-tumblr fa-5x"></i>
-	          </a></li>
-	          <li><a class="nav-link nav-icon" href="https://github.com/HouraiTeahouse">
-	            <i class="fab fa-github fa-5x"></i>
-	          </a></li>
-  		    </ul>
-		  </span>
-  	    </div>
-	  </div>
+<section class="container wrapper-contribute">
+    <div class="row-fluid contribute-header">
+      <h1 class="contribute-title">Contribute</h1>
     </div>
-    <div class="col-sm-6">
-      <div class="container cont-role">
-        <p>I want to contribute as...</p>
+    <div class="row-fluid contribute-layout">
+      <div class="col-md-6 contribute-desc">
         <div class="row">
-          <div class="col-sm-6">
-            <div class="role-button">
-	          <button>Programmer</button>
-  	        </div>
-	      </div>
-          <div class="col-sm-6">
-            <div class="role-button">
-	          <button>Character Modeler</button>
-  	        </div>
-	      </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="role-button">
-	          <button>Animator</button>
-  	        </div>
-	      </div>
-          <div class="col-sm-6">
-            <div class="role-button">
-	          <button>Musician</button>
-  	        </div>
-	      </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <p>Discord Username</p>
-	      </div>
-          <div class="col-sm-6">
-            <p>Github Username</p>
-	      </div>
-        </div>
-        <div class="row terms">
-          <label class="container">I agree to Terms and Conditions *
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
+          <div class="contribute-blurb">
+            <span>Community contributions continue to keep Hourai Teahouse's ticking.</span>
+          </div>
         </div>
       </div>
-        <div class="container cont-role cont-submit">
-            <button>Submit</button>
+      <div class="col-md-6 contribute-form">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="contribute-blurb">
+              <span>I want to contribute as...</span>
+            </div>
+          </div>
+          <div class="row contribute-form-roles justify-content-center">
+            <div class="col-sm-6 contribute-roles-button">
+              <button class="red-gradient-bg border-navy">Programmer</button>
+            </div>
+            <div class="col-sm-6 contribute-roles-button">
+              <button class="red-gradient-bg border-navy">Character Modeler</button>
+            </div>
+            <div class="col-sm-6 contribute-roles-button">
+              <button class="red-gradient-bg border-navy">Animator</button>
+            </div>
+            <div class="col-sm-6 contribute-roles-button">
+              <button class="red-gradient-bg border-navy">Musician</button>
+            </div>
+          </div>
+          <div class="row contribute-form-inputs justify-content-center">
+            <div class="col-lg-6 contribute-inputs-user">
+              <div class="row no-gutters justify-content-center">
+                <input id="discordUser" placeholder="Discord Username">
+              </div>
+            </div>
+            <div class="col-lg-6 contribute-inputs-user">
+              <div class="row no-gutters justify-content-center">
+                <input id="discordUser" placeholder="Github Username">
+              </div>
+            </div>
+          </div>
+          <div class="row border-thin-navy contribute-form-terms">
+            <div class="col-12 contribute-form-checkbox">
+              <div class="row align-content-center">
+                <input class="col-1" type="checkbox">
+                <div class="col-11">
+                  <span>I agree to Terms and Conditions *</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row contribute-form-submit">
+            <div class="col-auto contribute-submit-button no-gutter-left no-gutter-right">
+              <button class="background-pink">Submit</button>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-md-6 contribute-social">
+        <div class="row justify-content-center">
+          <div class="col-7">
+            <div class="row h-100 align-content-center">
+              <div class="contribute-blurb">
+                <span>Chat with us on Discord</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 discord">
+            <a class="nav-link nav-icon" href="https://discord.gg/VuZhs9V">
+              <i class="fab fa-discord fa-5x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 contribute-social">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="row h-100 align-content-center">
+              <div class="contribute-blurb">
+                <span>And follow us</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <ul class="row">
+              <li class="col-auto">
+                <a class="nav-link nav-icon" href="https://www.youtube.com/HouraiTeahouse">
+                <i class="fab fa-youtube fa-5x"></i>
+                </a>
+              </li>
+              <li class="col-auto">
+                <a class="nav-link nav-icon" href="https://facebook.com/HouraiTeahouse">
+                  <i class="fab fa-facebook fa-5x"></i>
+                </a>
+              </li>
+              <li class="col-auto">
+                <a class="nav-link nav-icon" href="https://twitter.com/HouraiTeahouse">
+                  <i class="fab fa-twitter fa-5x"></i>
+                </a>
+              </li>
+              <li class="col-auto">
+                <a class="nav-link nav-icon" href="https://hourai-teahouse.tumblr.com/">
+                  <i class="fab fa-tumblr fa-5x"></i>
+                </a>
+              </li>
+              <li class="col-auto">
+                <a class="nav-link nav-icon" href="https://github.com/HouraiTeahouse">
+                  <i class="fab fa-github fa-5x"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 </div>

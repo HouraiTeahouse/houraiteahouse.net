@@ -1,105 +1,106 @@
-.cont-head {
-	padding-left: 10px;
+.wrapper-contribute {
+    padding: 15px;
 }
-
-.cont-info {
-	padding-bottom: 10px;
-
-    p {
-	    font-size: $font-size-default;
-	}
+.contribute-header {
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-
-.cont-social {
+.contribute-layout {
+    position: relative;
+}
+.contribute-desc {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.contribute-form {
+    position: relative;
+    .contribute-blurb {
+        padding: 10px;
+    }
+}
+.contribute-form-roles {
+    .contribute-roles-button {
+        padding: 5px;
+    }
+    button {
+        padding: 10px;
+        width: 100%;
+        height: 75px;
+        color: $font-color-primary;
+    }
+}
+.contribute-form-inputs {
+    .contribute-inputs-user {
+        padding: 10px;
+    }
+    input {
+        padding: 5px;
+        width: 100%;
+    }
+}
+.contribute-form-terms {
+    border-left: none;
+    border-right: none;
+}
+.contribute-form-submit {
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .contribute-submit-button {
+        button {
+            width: 125px;
+            height: 75px;
+            color: $font-color-primary;
+            border: none;
+        }
+    }
+}
+.contribute-social {
     border-top: 1px solid $border-primary;
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 100%;
-    width: 100%;
-    
-    .col-sm-7 {
-    	display: flex;
-    	align-items: center;
-		padding-left: 0;
-		> p {
-			margin-bottom: 0;
-		}
+    ul {
+        padding: 0;
+        list-style-type: none;
     }
-    
-    .col-sm-5 {
-    	display: flex;
-    	align-items: center;
-		padding-right: 0;
-   	}
-
+    li {
+        padding-left: 0;
+    }
+    a {
+        padding: 0;
+    }
     .nav-icon {
         color: white;
     }
-    
-    p {
-	    font-size: $font-size-default;
-	    font-weight: bold;
-	}
-    
-    ul {
-      padding: 0;
-    }
-    
-    li {
-    	display: inline-block;
-    	list-style-type: none;
-    	padding-right: 15px;
-    	
-    	> a {
-    		padding: 0;
-    	}
+    .contribute-blurb {
+        span {
+            font-size: $font-size-default;
+            font-weight: bold;
+        }
     }
 }
-
-.cont-role {
-    p {
-	    font-size: $font-size-default;
-	}
-
-	button {
-	    background: $red-gradient;
-	    border: 5px solid $border-secondary;
-	    color: white;
-	    font-size: $font-size-default;
-	    font-weight: bold;
-	    padding: 15px 15px 15px 15px;
-	    max-width: 100%;
-	    width: 100%;
-	    height: 120px;
-	    margin-bottom: 25px;	    
-	}
-	
-	.terms {
-		overflow: hidden;
-		float: right;
-		label.checkbox-label input[type=checkbox] {
-			position: relative;
-			vertical-align: middle;
-		}
-		input {
-			margin-top: 2px;
-			margin-right: 2px;
-			float: left;
-		}
-	}
-}
-
-.cont-submit {
-    float: right;
-	button {
-	    float: right;
-        background: $border-primary;
-        border: none;
-        color: white;
-        font-size: $font-size-default;
-        max-width: 50%;
-        width: 50;
-        height: 60px;
-        padding: 10px;
+@media only screen and (min-width: 768px) {
+    .contribute-form {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 0;
+    }
+    .contribute-form-roles {
+        button {
+            padding: 20px;
+            width: 100%;
+            min-height: 125px;
+            color: $font-color-primary;
+        }
+    }
+    .contribute-form-submit {
+        justify-content: end;
+        .contribute-submit-button {
+            button {
+                width: 125px;
+                height: 75px;
+            }
+        }
     }
 }
