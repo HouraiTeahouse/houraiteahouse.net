@@ -3,34 +3,42 @@ nav {
 }
 .navigation-icons {
   width: 100%;
-  @media only screen and (min-width: 968px) {
-    width: auto;
-  }
 }
 .navbar-brand {
-  color: $nav-text
+  color: $nav-text;
+  &:hover {
+  color: $nav-highlight;
+  }
+  &:active {
+  color: $nav-highlight;
+  }
 }
 .nav-link {
-  color: $nav-text
+  color: $nav-text;
+  &:hover {
+  color: $nav-highlight;
+  }
+  &:active {
+  color: $nav-highlight;
+  }
 }
 .nav-icon {
   color: $nav-menu-icon;
-}
-.navbar-brand:active {
+  &:hover {
   color: $nav-highlight;
-}
-.nav-link:active {
+  }
+  &:active {
   color: $nav-highlight;
+  }
 }
-.nav-icon:active {
-  color: $nav-highlight;
+.navigation-social {
+  flex-direction: row;
 }
-.navbar-brand:hover {
-  color: $nav-highlight;
-}
-.nav-link:hover {
-  color: $nav-highlight;
-}
-.nav-icon:hover {
-  color: $nav-highlight;
+@media only screen and (min-width: 968px) {
+  .naigation-icons {
+    width: auto;
+  }
+  .navigation-social {
+    flex-direction: column;
+  }
 }

@@ -38,26 +38,34 @@
           </a>
         </li>
       </ul>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav navigation-social">
         {% if site.discord %}
+        <li class="col-auto no-gutter-left no-gutter-lg-right">
           <a class="nav-link nav-icon" href="https://discord.gg/{{ site.discord }}">
             <i class="fab fa-discord "></i>
           </a>
+        </li>
         {% endif %}
         {% if site.facebook %}
+        <li class="col-auto no-gutter-left no-gutter-lg-right">
           <a class="nav-link nav-icon" href="https://facebook.com/{{ site.facebook }}">
             <i class="fab fa-facebook"></i>
           </a>
+        </li>
         {% endif %}
         {% if site.twitter %}
+        <li class="col-auto no-gutter-left no-gutter-lg-right">
           <a class="nav-link nav-icon" href="https://twitter.com/{{ site.twitter }}">
             <i class="fab fa-twitter"></i>
           </a>
+        </li>
         {% endif %}
         {% if site.github %}
+        <li class="col-auto no-gutter-left no-gutter-lg-right">
           <a class="nav-link nav-icon" href="https://github.com/{{ site.github }}">
             <i class="fab fa-github"></i>
           </a>
+        </li>
         {% endif %}
       </ul>
     </div>

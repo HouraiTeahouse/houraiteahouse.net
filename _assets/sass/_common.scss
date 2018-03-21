@@ -1,3 +1,4 @@
+// Mobile CSS
 [class*="wrapper-"] {
   width: 100%;
   height: 100%;
@@ -36,6 +37,27 @@
 }
 .red-gradient-bg {
   background-image: $red-gradient;
+} 
+.no-gutter-right {
+  padding-right: 0;
+  margin-right: 0;
+}
+.no-gutter-left {
+  padding-left: 0;
+  margin-left: 0;
+}
+@media only screen and (max-width: 576px) {
+  [class*="wrapper-"] {
+    font-size: $font-size-mobile;
+  }
+  .no-gutter-sm-right {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .no-gutter-sm-left {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 @media only screen and (min-width: 768px) {
   .no-gutter-md-right {
@@ -47,9 +69,13 @@
     margin-left: 0;
   }
 }
-// Mobile css
-@media only screen and (max-width: 576px) {
-    [class*="wrapper-"] {
-      font-size: $font-size-mobile;
-    }
+@media only screen and (min-width: 968px) {
+  .no-gutter-lg-right {
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .no-gutter-lg-left {
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
