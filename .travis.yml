@@ -7,8 +7,21 @@ install:
 script:
   - bundle exec jekyll build
 deploy:
-  - provider: script
-    script: curl -i -X POST ${DEPLOY_BASE_URL}?token=$TOKEN
-    skip_cleanup: true
+  - provider: pages
+    skip-cleanup: true
+    repo: HouraiTeahouse/houraiteahouse.net-prod
+    github-token: $GITHUB_TOKEN
+    target-branch: master
+    fqdn: houraiteahouse.net
+    local_dir: _site
     on:
       branch: master
+  - provider: pages
+    skip-cleanup: true
+    repo: HouraiTeahouse/houraiteahouse.net-test
+    github-token: $GITHUB_TOKEN
+    target-branch: master
+    fqdn: test.houraiteahouse.net
+    local_dir: _site
+    on:
+      branch: develop
