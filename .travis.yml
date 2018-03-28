@@ -16,7 +16,7 @@ deploy:
     fqdn: test.houraiteahouse.net
     local_dir: _site
     on:
-      branch: develop
+      branch: master
   #- provider: pages
   #  skip-cleanup: true
   #  repo: HouraiTeahouse/houraiteahouse.net-prod
