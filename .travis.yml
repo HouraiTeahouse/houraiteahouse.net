@@ -9,19 +9,21 @@ script:
 deploy:
   - provider: pages
     skip-cleanup: true
-    repo: HouraiTeahouse/houraiteahouse.net-prod
-    github-token: $GITHUB_TOKEN
-    target-branch: master
-    fqdn: houraiteahouse.net
-    local_dir: _site
-    on:
-      branch: master
-  - provider: pages
-    skip-cleanup: true
     repo: HouraiTeahouse/houraiteahouse.net-test
     github-token: $GITHUB_TOKEN
+    keep-history: true
     target-branch: master
     fqdn: test.houraiteahouse.net
     local_dir: _site
     on:
       branch: develop
+  #- provider: pages
+  #  skip-cleanup: true
+  #  repo: HouraiTeahouse/houraiteahouse.net-prod
+  #  github-token: $GITHUB_TOKEN
+  #  keep-history: true
+  #  target-branch: master
+  #  fqdn: houraiteahouse.net
+  #  local_dir: _site
+  #  on:
+  #    branch: master
