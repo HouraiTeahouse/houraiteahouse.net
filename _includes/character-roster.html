@@ -1,15 +1,50 @@
 <article class="container roster">
-    <section class="row roster-set">
-    {% for character in site.data.characters %}
-      {% cycle 'open': '<ul class="col-md-3 roster-list">', '', %}
-        {% if page.path == "index.html" %}
-            <li class="roster-character background-navy border-pink">
+  <section class="row roster-set">
+  {% for character in site.data.characters %}
+  {% capture roster_id %}{{ character.short_name }}-icon{% endcapture %}
+  {% cycle 'open': '<ul class="col-md-3 roster-list">', '', %}
+    {% if page.path == "index.html" %}
+      <li id="{{ roster_id }}" class="roster-character background-navy border-pink" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
+    {% else %}
+      <li id="{{ roster_id }}" class="roster-character roster-character-background border-navy" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
+    {% endif %}    
+    {% asset '{{ character.chibi_img }}' class="roster-image" %}
+    </li>
+  {% cycle 'close': '', '</ul>' %}
+  {% endfor %}
+  </section>
+  <section class="row roster-info">
+    <div id="roster-carousel" class="col-12 carousel slide" data-interval="false">
+      <div class="carousel-inner roster-carousel-items">
+      {% for character in site.data.characters %}
+        {% if character.index == 0 %}
+          <div id="{{ character.short_name }}" class="carousel-item
+          active">
         {% else %}
-            <li class="roster-character roster-character-background border-navy">
-        {% endif %}    
-        {% asset '{{ character.chibi_img }}' class="image" %}
-            </li>
-      {% cycle 'close': '', '</ul>' %}
-    {% endfor %}
-    </section>
+          <div id="{{ character.short_name }}" class="carousel-item">
+        {% endif %}
+          <div class="row">
+            <div class="col-md-4 roster-carousel-image">
+              <div class="row h-100 justify-content-center">
+                {% asset '{{ character.chibi_img }}' class="roster-image" %}
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="row no-gutters">
+                <h2 class="roster-character-name">
+                  {{ character.full_name }}
+                </h2>
+              </div>
+              <div class="row no-gutters">
+                <div class="roster-character-info">
+                  {{ character.description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
 </article>

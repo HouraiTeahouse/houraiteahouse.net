@@ -2,7 +2,7 @@
 .roster {
     padding: 2.5%;
 }
-.roster-set {
+.roster-set, .roster-info {
     margin: 0;
     padding: 15px;
 }
@@ -18,12 +18,20 @@
         &:hover {
         cursor: pointer;
     }
-    .image {
-        width: 100%;
-    }
+}
+.roster-image {
+    width: 100%;
 }
 .roster-character-background {
     background: rgba(46, 48, 70, .25);
+}
+.roster-carousel-image {
+    display: none;
+}
+.roster-character-info {
+    margin-right: -15px;
+    max-height: 200px;
+    overflow-y: auto;
 }
 @media only screen and (min-width: 768px) {
     .roster-list {
@@ -32,5 +40,8 @@
     .roster-character {
         max-width: 400px;
         max-height: 400px;
+    }
+    .roster-carousel-image {
+        display: block;
     }
 }
