@@ -25,6 +25,13 @@
 .roster-character-background {
     background: rgba(46, 48, 70, .25);
 }
+.roster-carousel-items {
+    .carousel-item-prev, .carousel-item-next, .carousel-item-left, .carousel-item-right {
+        .roster-character-info {
+            overflow-y: hidden !important;
+        }
+    }
+}
 .roster-carousel-image {
     display: none;
 }
