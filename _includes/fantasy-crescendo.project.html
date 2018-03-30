@@ -1,60 +1,83 @@
 <div class="container-fluid wrapper-fc">
-    <section class="jumbotron-fluid fc-splash">
-        {% asset placeholder class="splash-image" %}
-    </section>
-    <section class="container-fluid">
-        <div class="row fc-blurb">
-            <div class="col-11 offset-1">
-                <div class="row fc-description border-fc align-content-center">
-                    <div class="col-md-6 offset-md-1">
-                        <div class="fc-blurb-title">
-                            <h3>What is Fantasy Crescendo?</h3>
-                        </div>
-                        <div class="text">
-                            Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
-                        </div>
-                    </div>
-                </div>
+  <section class="jumbotron-fluid fc-splash">
+    {% asset placeholder class="splash-image" %}
+  </section>
+  <section class="container-fluid">
+    <div class="row fc-blurb">
+      <div class="col-11 offset-1">
+        <div class="row fc-description border-fc align-content-center">
+          <div class="col-md-6 offset-md-1">
+            <div class="fc-blurb-title">
+              <h3>What is Fantasy Crescendo?</h3>
             </div>
-            <div class="row w-100 justify-content-center no-gutters">
-                <ul class="col-5 fc-download-buttons">
-                    <div class="row h-100 align-content-center justify-content-center">
-                        <li class="col-6 fc-download">
-                            <button class="red-gradient-bg border-navy">Windows</button>
-                        </li>
-                        <div class="w-100"></div>
-                        <li class="col-6 fc-download">
-                            <button class="red-gradient-bg border-navy">MacOS</button>
-                        </li>
-                        <div class="w-100"></div>
-                        <li class="col-6 fc-download">
-                            <button class="red-gradient-bg border-navy">Linux</button>
-                        </li>
-                    </div>
-                </ul>
+            <div class="text">
+              Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
             </div>
+          </div>
         </div>
-    </section>
-    <section class="container-fluid background-fc">
-        <div class="row fc-roster-title justify-content-center">
-            <h1>Fighters</h1>
+      </div>
+      <div class="row w-100 justify-content-center no-gutters">
+        <ul class="col-5 fc-download-buttons">
+          <div class="row h-100 align-content-center justify-content-center">
+            <li class="col-6 fc-download">
+              <button class="red-gradient-bg border-navy">Windows</button>
+            </li>
+            <div class="w-100"></div>
+            <li class="col-6 fc-download">
+              <button class="red-gradient-bg border-navy">MacOS</button>
+            </li>
+            <div class="w-100"></div>
+            <li class="col-6 fc-download">
+              <button class="red-gradient-bg border-navy">Linux</button>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid background-fc">
+    <div class="row fc-roster-title justify-content-center">
+        <h1>Fighters</h1>
+    </div>
+    {% include character-roster.html %}
+  </section>
+  <section class="container-fluid">
+    <div class="row fc-stages">
+      <div class="col-3 border-fc"></div>
+      <div class="col-6">
+        <div class="row h-100 fc-title align-content-center justify-content-center">
+          <h2 class="">Stages</h2>
         </div>
-        {% include character-roster.html %}
-    </section>
-    <section class="container-fluid">
-        <div class="row fc-stages">
-            <div class="col-3 border-fc"></div>
-            <div class="col-6">
-                <div class="row h-100 fc-title align-content-center justify-content-center">
-                    <h2 class="">Stages</h2>
-                </div>
-            </div>
-            <div class="col-3 border-fc"></div>
+      </div>
+      <div class="col-3 border-fc"></div>
+    </div>
+    <div class="row fc-stages">
+      <div id="fc-stages-carousel" class="col-12 carousel slide" data-ride="carousel" data-interval="10000">
+        <ol class="carousel-indicators">
+          <li data-target="#fc-stages-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#fc-stages-carousel" data-slide-to="1"></li>
+          <li data-target="#fc-stages-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            {% asset placeholder class="fc-stages-image" %}
+          </div>
+          <div class="carousel-item">
+            {% asset placeholder class="fc-stages-image" %}
+          </div>
+          <div class="carousel-item">
+            {% asset placeholder class="fc-stages-image" %}
+          </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                Stage Gallery Goes Here
-            </div>
-        </div>
-    </section>
+        <a class="carousel-control-prev" href="#fc-stages-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#fc-stages-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
 </div>
