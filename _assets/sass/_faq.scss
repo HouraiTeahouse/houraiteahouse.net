@@ -1,0 +1,24 @@
+.faq-search {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+.faq-item {
+    margin-bottom: 25px;
+    background: $background-darker-gray;
+}
+.faq-question {
+    padding: 0;
+    button {
+        text-decoration: none;
+        color: $font-color-white;
+        &.collapsed {
+            color: $font-color-gray;
+        }
+        &:hover {
+            color: $font-color-white;
+        }
+    }
+}

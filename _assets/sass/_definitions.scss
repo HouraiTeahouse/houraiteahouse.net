@@ -1,11 +1,12 @@
 // Website definitions:
-$background-primary             : rgb(59, 59, 69);
-$background-secondary           : rgb(46, 48, 70);
+$background-gray                : rgb(59, 59, 69);
+$background-darker-gray         : rgb(41, 41, 48);
+$background-navy                : rgb(46, 48, 70);
 $background-gradient-top        : rgb(174, 126, 224);
 $background-gradient-bottom     : rgba(0, 2, 41, .61);
-$background-gradient            : linear-gradient(180deg, $background-gradient-top, $background-gradient-bottom);
-$border-primary                 : rgb(203, 131, 194);
-$border-secondary               : rgb(38, 20, 79);
+$background-gradient-pink       : linear-gradient(180deg, $background-gradient-top, $background-gradient-bottom);
+$border-pink                    : rgb(203, 131, 194);
+$border-navy-dark               : rgb(38, 20, 79);
 $button-background              : rgb(203, 131, 194);
 $button-gradient-top            : rgb(186, 20, 137);
 $button-gradient-mid            : rgb(177, 31, 91);
@@ -16,26 +17,17 @@ $red-gradient-top				: rgb(186, 20, 137);
 $red-gradient-mid				: rgb(177, 31, 91);
 $red-gradient-bottom 			: rgb(209, 52, 52);
 $red-gradient					: linear-gradient(180deg, $red-gradient-top, $red-gradient-mid, $red-gradient-bottom);
-
-$red-gradient-top                : rgb(186, 20, 137);
-$red-gradient-mid                : rgb(177, 31, 91);
-$red-gradient-bottom             : rgb(209, 52, 52);
-$red-gradient                    : linear-gradient(180deg, $red-gradient-top,
-$red-gradient-mid, $red-gradient-bottom);
-
 // Font definitions:
 $font-size-default              : 24px;
 $font-size-mobile               : 16px;
-$font-color-primary             : rgb(255, 255, 255);
-
+$font-color-white               : rgb(255, 255, 255);
+$font-color-gray                : rgb(172, 172, 175);
 // Navigation definitions
 $nav-text                       : rgb(198, 112, 190);
 $nav-menu-icon                  : rgb(181, 105, 175);
 $nav-menu-background            : rgb(44, 27, 97);
 $nav-highlight                  : rgb(255, 255, 255);
 $nav-mobile-highlight           : rgb(205, 129, 194);
-
 // Footer definitions
 $footer-text                    : rgb(255, 255, 255);
-
 // Z-indexes

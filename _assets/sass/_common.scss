@@ -22,33 +22,38 @@
   z-index: 0;
 }
 .background-pink {
-  background: $border-primary;
+  background: $border-pink;
 }
 .background-navy {
-  background: $background-secondary;
+  background: $background-navy;
 }
 .border-pink {
   border-style: solid;
-  border-color: $border-primary;
+  border-color: $border-pink;
   border-width: 3px;
 }
 .border-navy {
   border-style: solid;
-  border-color: $border-secondary;
+  border-color: $border-navy-dark;
   border-width: 3px;
+}
+.border-black-thin {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
 }
 .border-thin-pink {
   border-style: solid;
-  border-color: $border-primary;
+  border-color: $border-pink;
   border-width: 1px;
 }
 .border-thin-navy {
   border-style: solid;
-  border-color: $border-secondary;
+  border-color: $border-navy-dark;
   border-width: 1px;
 }
 .background-gradient {
-  background-image: $background-gradient;
+  background-image: $background-gradient-pink;
 }
 .red-gradient-bg {
   background-image: $red-gradient;

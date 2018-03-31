@@ -26,7 +26,7 @@
         padding: 10px;
         width: 100%;
         height: 75px;
-        color: $font-color-primary;
+        color: $font-color-white;
     }
 }
 .contribute-form-inputs {
@@ -50,13 +50,13 @@
         button {
             width: 125px;
             height: 75px;
-            color: $font-color-primary;
+            color: $font-color-white;
             border: none;
         }
     }
 }
 .contribute-social {
-    border-top: 1px solid $border-primary;
+    border-top: 1px solid $border-pink;
     padding-top: 10px;
     padding-bottom: 10px;
     ul {
@@ -91,7 +91,7 @@
             padding: 20px;
             width: 100%;
             min-height: 125px;
-            color: $font-color-primary;
+            color: $font-color-white;
         }
     }
     .contribute-form-submit {

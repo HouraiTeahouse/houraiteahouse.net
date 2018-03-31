@@ -14,7 +14,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid $border-primary;
+        border-bottom: 1px solid $border-pink;
         h1 {
             font-size: 2.25em;
             font-weight: 700;
@@ -38,7 +38,7 @@
             padding-bottom: 5%;
             max-height: 350px;
             justify-content: center;
-            border-bottom: 3px solid $border-primary;
+            border-bottom: 3px solid $border-pink;
         }
         .post-flair {
             position: absolute;
@@ -80,7 +80,7 @@
                     }
                     a {
                         text-decoration: none;
-                        color: $font-color-primary;
+                        color: $font-color-white;
                     }
                 }
                 .post-date {
@@ -105,7 +105,7 @@
         justify-content: flex-end;
         button {
             cursor: pointer;
-            color: $font-color-primary;
+            color: $font-color-white;
             background: $button-background;
             border: none;
         }
@@ -174,5 +174,5 @@
     }
 }
 .gradient-background {
-    background: $background-gradient;
+    background: $background-gradient-pink;
 }
