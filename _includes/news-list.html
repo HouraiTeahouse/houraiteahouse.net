@@ -50,7 +50,11 @@
     {% endfor %}
   </ul>
   <div class="col-md-10 offset-md-1 news-button">
-      <button>More news</button>
+    {% if page.path == "index.html" %}
+      <a href="/news" role="button">More news</a>
+    {% else %}
+      <a href="" role="button">More news</a>
+    {% endif %}
   </div>
   {% endif %}
 </article>
