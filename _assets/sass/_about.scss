@@ -4,6 +4,12 @@
 }
 .about-blurb-content {
   padding: 50px;
+  a {
+    text-decoration: none;
+    color: $font-color-white;
+    width: 175px;
+    height: 100px;
+  }
 }
 .about-projects {
     h2 {
