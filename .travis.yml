@@ -6,6 +6,7 @@ install:
   - bundle install
 script:
   - bundle exec jekyll build
+  - touch _site/.nojekyll
 deploy:
   - provider: pages
     skip-cleanup: true
