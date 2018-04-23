@@ -1,5 +1,4 @@
 <article class="container-fluid news">
-  <script type="text/javascript" src="{% asset news-list.controller.js @path %}"></script>
   <header class="row news-header">
     <h1 class="col-12">
     {% if page.path == "news.md" %}
@@ -15,15 +14,16 @@
   {% else %}
   <section class="row news-post">
   {% endif %}
-    <div class="col-md-4 news-post-preview">
-      <div class="row overlay-wrapper">
-        <div class="rounded-circle image-border">
+    <div class="col-12 h-100 news-post-preview">
+      <div class="row h-100 overlay-wrapper">
+        <div class="col-12 no-gutter-left no-gutter-right post-background"></div>
+        <div class="col-md-auto h-100 no-gutter-left no-gutter-right image-border">
           <div class="image-overlay"></div>
           {% asset placeholder class="image" %}
         </div>
       </div>
     </div>
-    <div class="col-md-8 offset-md-2 news-post-border">
+    <div class="col-md-8 offset-md-2 h-100 news-post-border">
       <div class="row align-items-end news-post-header">
         <div class="col-md-auto news-post-title">
           <h1>
