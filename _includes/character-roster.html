@@ -4,9 +4,9 @@
   {% capture roster_id %}{{ character.short_name }}-icon{% endcapture %}
   {% cycle 'open': '<ul class="col-md-3 roster-list">', '', %}
     {% if page.path == "index.html" %}
-      <li id="{{ roster_id }}" class="roster-character background-navy border-pink" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
+      <li id="{{ roster_id }}" class="background-navy border-pink roster-character" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
     {% else %}
-      <li id="{{ roster_id }}" class="roster-character roster-character-background border-navy" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
+      <li id="{{ roster_id }}" class="roster-character-background border-navy roster-character" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
     {% endif %}    
     {% asset '{{ character.chibi_img }}' class="roster-image" %}
     </li>

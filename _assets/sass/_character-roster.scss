@@ -18,12 +18,15 @@
         &:hover {
         cursor: pointer;
     }
+    &.border-navy {
+        border-width: 4px;
+    }
 }
 .roster-image {
     width: 100%;
 }
 .roster-character-background {
-    background: rgba(46, 48, 70, .25);
+    background: rgba(0, 7, 74, 0.22);
 }
 .roster-carousel-items {
     .carousel-item-prev, .carousel-item-next, .carousel-item-left, .carousel-item-right {
