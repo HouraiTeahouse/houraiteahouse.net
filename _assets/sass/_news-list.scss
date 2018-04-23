@@ -1,9 +1,12 @@
 .news-post {
     margin-top: 15px;
-    margin-bottom: 15px;
     height: 325px;
     max-height: 325px;
+    cursor: pointer;
     overflow: hidden;
+    &:hover {
+        
+    }
     &.selected {
         border-top: 3px solid $border-pink;
         border-bottom: 3px solid $border-pink;

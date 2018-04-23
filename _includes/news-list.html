@@ -1,5 +1,5 @@
 <article class="container-fluid news">
-  <script type="text/javascript" src=""></script>
+  <script type="text/javascript" src="{% asset news-list.controller.js @path %}"></script>
   {% for post in site.posts %}
   {% if post == site.posts[0] %}
   <section class="row news-post selected">
