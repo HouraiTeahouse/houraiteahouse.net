@@ -9,6 +9,10 @@
   font-size: $font-size-default;
   box-sizing: border-box;
 }
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
 .overlay {
   position: absolute;
   top: 0;

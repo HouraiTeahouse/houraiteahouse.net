@@ -16,7 +16,7 @@
 }
 .news-post {
     position: relative;
-    height: 20vw;
+    height: 15vw;
     min-height: 275px;
     max-height: 350px;
     border-bottom: 1px solid $border-pink;
@@ -24,25 +24,25 @@
     &:hover {
         border-top: 3px solid $border-pink;
         border-bottom: 3px solid $border-pink;
-        .news-post-preview {
-            display: block;
-        }
         .post-background {
             background-image: $background-gradient-pink;
         }
         .news-post-border {
             border-bottom: none;
         }
+        .image {
+            opacity: 1;
+        }
     }
     .news-post-border {
         overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 .news-post-content {
     position: relative;
 }
 .news-post-preview {
-    display: none;
     position: absolute;
     z-index: 0;
     .post-background {
@@ -65,8 +65,13 @@
         position: relative;
         width: 100%;
         height: 100%;
+        opacity: 0.35;
         z-index: 1;
+        transition: opacity 0.2s;
     }
+}
+.news-post-border {
+    justify-content: center;
 }
 .news-post-header {
     padding-top: 15px;
@@ -86,6 +91,7 @@
     }
 }
 .news-post-details {
+    overflow: hidden;
     h1 {
         font-size: 1rem;
     }
@@ -115,6 +121,9 @@
         .image {
             width: auto;
         }
+    }
+    .news-post-border {
+        justify-content: flex-start;
     }
     .news-post-header {
         align-content: flex-end;
