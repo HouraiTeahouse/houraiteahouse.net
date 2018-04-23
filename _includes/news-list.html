@@ -1,60 +1,40 @@
-{% if page.path == "index.html" %}
-<article class="container-fluid news gradient-background">
-{% else %}
 <article class="container-fluid news">
-{% endif %}
-  <header class="row news-title">
-    <h1 class="col-12">
-    {% if page.path == "news.md" %}
-      Hourai Teahouse - News
-    {% else %}
-      News
-    {% endif %}
-   </h1>
-  </header>
-  <ul class="row list-news">
-  {% assign post_size = site.posts | size %}
-  {% if post_size == 0 %} 
-    <p>No posts...yet.</p>
-  {% else %}
+  <script type="text/javascript" src=""></script>
   {% for post in site.posts %}
-    {% if page.path == "news.md" and post == site.posts[0] %}
-    <li class="col-md-12 news-post-top">
-      <section class="row-fluid post gradient-background">
-    {% else %}
-    <li class="col-md-12 news-post">
-      <section class="row-fluid post">
-    {% endif %}
-        {% if post == site.posts[0] %}
-        <div class="col-sm-3 post-flair">
-          <div class="rounded-circle image-border">
-            {% asset placeholder class="image" %}
-          </div>
-        </div>
-        {% endif %}
-        <div class="col-sm-9 offset-sm-3 post-content">
-          <div class="row post-header">
-            <div class="col-sm-12 post-title">
-              <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            </div>
-            <div class="col-sm-12 post-date">
-              <span class="date">{{ post.date | date_to_long_string }}</span>
-            </div>
-          </div>
-          <div class="col-sm-12 post-body">
-              {{ post.excerpt }}
-          </div>
-        </div>
-      </section>
-    </li>
-    {% endfor %}
-  </ul>
-  <div class="col-md-10 offset-md-1 news-button">
-    {% if page.path == "index.html" %}
-      <a href="/news" role="button">More news</a>
-    {% else %}
-      <a href="" role="button">More news</a>
-    {% endif %}
-  </div>
+  {% if post == site.posts[0] %}
+  <section class="row news-post selected">
+  {% else %}
+  <section class="row news-post">
   {% endif %}
+    <div class="col-md-4 news-post-preview">
+      <div class="row overlay-wrapper">
+        <div class="rounded-circle image-border">
+          <div class="image-overlay"></div>
+          {% asset placeholder class="image" %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 offset-md-2 news-post-border">
+      <div class="row align-items-end news-post-header">
+        <div class="col-md-auto news-post-title">
+          <h1>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h1>
+        </div>
+        <div class="col-md-auto news-post-date">
+          <h2>
+            {{ post.date | date_to_long_string }}
+          </h2>
+        </div>
+      </div>
+      <div class="row news-post-details">
+        <div class="col-12">
+          <span>{{ post.excerpt }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
 </article>

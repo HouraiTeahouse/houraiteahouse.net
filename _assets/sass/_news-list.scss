@@ -1,179 +1,121 @@
-.news {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    box-sizing: border-box;
+.news-post {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 325px;
+    max-height: 325px;
     overflow: hidden;
-    > .news-title {
-        margin: 0;
-        padding: 2.5%;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+    &.selected {
+        border-top: 3px solid $border-pink;
+        border-bottom: 3px solid $border-pink;
+        .news-post-preview {
+            display: block;
+        }
+        .news-post-border {
+            border-bottom: none;
+        }
+    }
+    .news-post-border {
+        height: 100%;
         border-bottom: 1px solid $border-pink;
-        h1 {
-            font-size: 2.25em;
-            font-weight: 700;
-        }
     }
-    > .list-news {
+}
+.news-post-content {
+    position: relative;
+}
+.news-post-preview {
+    display: none;
+    position: absolute;
+    min-height: 325px;
+    max-height: 325px;
+    z-index: 0;
+    .overlay-wrapper {
         position: relative;
-        margin: 0;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-        list-style-type: none;
+        height: 100%;
     }
-    [class*="news-post"] {
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-        > .post {
-            position: relative;
-            padding-top: 5%;
-            padding-bottom: 5%;
-            max-height: 350px;
-            justify-content: center;
-            border-bottom: 3px solid $border-pink;
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(180deg, rgba(27, 0, 84, 0.66), $background-gray);
+        box-shadow: inset 0px 0px 30px rgba(9, 9, 33, 0.3);
+        z-index: 2;
+    }
+    .image-border {
+        width: 100%;
+    }
+    .image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-height: 325px;
+        z-index: 1;
+    }
+}
+.news-post-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-content: flex-start;
+    .news-post-title {
+        h1 {
+            font-size: 1.75rem;
         }
-        .post-flair {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 0;
-            max-height: 400px;
-            justify-self: center;
-            &:after {
-                display: block;
-                content: "";
-                padding-top: 100%;
+        text-align: center;
+    }
+    .news-post-date {
+        h2 {
+            font-size: 1.25rem;
+        }
+        text-align: center;
+    }
+}
+.news-post-details {
+    h1 {
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .news-post {
+        position: relative;
+        height: 250px;
+        max-height: 325px;
+        align-items: center;
+        &.selected {
+            .news-post-preview {
+                display: flex;
             }
+        }
+    }
+    .news-post-preview {
+        height: 100%;
+        max-height: none;
+        align-items: center;
+        .overlay-wrapper {
+            top: 0;
+            left: -50%;
+            width: 100%;
+        }
             .image-border {
                 position: absolute;
-                top: -50%;
+                top: 0;
                 left: 0;
-                width: 100%;
                 height: 100%;
                 overflow: hidden;
             }
             .image {
                 position: relative;
-                top: 50%;
                 width: 100%;
                 height: 100%;
             }
+    }
+    .news-post-header {
+        align-content: flex-end;
+        .news-post-title {
+            text-align: left;
         }
-        .post-content {
-            padding: 0;
-            align-items: center;
-            justify-content: center;
-            .post-header {
-                .post-title {
-                    padding-bottom: 10px;
-                    text-align: center;
-                    .title {
-                        font-size: 1.75em;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: $font-color-white;
-                    }
-                }
-                .post-date {
-                    text-align: center;
-                    .date {
-                        font-size: 1em;
-                    }
-                }
-            }
-            .post-body {
-                padding-left: 15px;
-                padding-right: 15px;
-                flex-direction: column;
-                justify-content: center;
-                font-size: $font-size-default;
-            }
+        .news-post-date {
+            text-align: left;
         }
     }
-    .news-button {
-        display: flex;
-        padding: 15px;
-        justify-content: flex-end;
-        a {
-            cursor: pointer;
-            text-decoration: none;
-            color: $font-color-white;
-            background: $button-background;
-            border: none;
-        }
-    }
-}
-@media only screen and (max-width: 576px) {
-    .news {
-        .post-header {
-            height: 200px;
-        }
-    }
-}
-@media only screen and (min-width: 576px) {
-    .news {
-        [class*="news-post"] {
-            > .post {
-                max-height: 400px;
-                align-items: flex-start;
-                justify-content: flex-start;
-                border-bottom: 1px solid pink;
-            }
-            .post-flair {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                &:after {
-                    content: none;
-                    padding-bottom: 0;
-                }
-                .image-border {
-                    position: static;
-                }
-                .image {
-                    position: static;
-                }
-            }
-            .post-content {
-                display: flex;
-                flex-direction: column;
-                &:after {
-                    content: none;
-                }
-                .post-header {
-                    width: 100%;
-                    .post-title {
-                        text-align: left;
-                        align-self: center;
-                    }
-                    .post-date {
-                        text-align: left;
-                        align-self: center;
-                        &:before {
-                            content: "|";
-                        }
-                    }
-                }
-                .post-body {
-                    width: 100%;
-                    text-align: left;
-                }
-            }
-        }
-    }
-}
-.gradient-background {
-    background: $background-gradient-pink;
 }
