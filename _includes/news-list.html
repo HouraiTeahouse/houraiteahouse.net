@@ -1,5 +1,14 @@
 <article class="container-fluid news">
   <script type="text/javascript" src="{% asset news-list.controller.js @path %}"></script>
+  <header class="row news-header">
+    <h1 class="col-12">
+    {% if page.path == "news.md" %}
+      Hourai Teahouse - News
+    {% else %}
+      News
+    {% endif %}
+   </h1>
+  </header>
   {% for post in site.posts %}
   {% if post == site.posts[0] %}
   <section class="row news-post selected">
@@ -37,4 +46,11 @@
     </div>
   </section>
   {% endfor %}
+  <div class="col-md-10 offset-md-1 news-button">
+    {% if page.path == "index.html" %}
+      <a href="/news" role="button">More news</a>
+    {% else %}
+      <a href="" role="button">More news</a>
+    {% endif %}
+  </div>
 </article>

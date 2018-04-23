@@ -1,13 +1,22 @@
+.news-header {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    text-align: center;
+    border-bottom: 1px solid $border-pink;
+    h1 {
+        font-size: 2.25em;
+        font-weight: 700;
+    }
+}
 .news-post {
-    margin-top: 15px;
     height: 325px;
     max-height: 325px;
     cursor: pointer;
-    overflow: hidden;
     &:hover {
-        
+
     }
     &.selected {
+        background-image: $background-gradient-pink;
         border-top: 3px solid $border-pink;
         border-bottom: 3px solid $border-pink;
         .news-post-preview {
@@ -20,6 +29,7 @@
     .news-post-border {
         height: 100%;
         border-bottom: 1px solid $border-pink;
+        overflow: hidden;
     }
 }
 .news-post-content {
@@ -51,7 +61,7 @@
     .image {
         position: relative;
         width: 100%;
-        height: 100%;
+        min-height: 325px;
         max-height: 325px;
         z-index: 1;
     }
@@ -76,6 +86,18 @@
 .news-post-details {
     h1 {
         font-size: 1rem;
+    }
+}
+.news-button {
+    display: flex;
+    padding: 15px;
+    justify-content: flex-end;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: $font-color-white;
+        background: $button-background;
+        border: none;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -107,7 +129,8 @@
                 overflow: hidden;
             }
             .image {
-                position: relative;
+                position: absolute;
+                left: 50%;
                 width: 100%;
                 height: 100%;
             }
