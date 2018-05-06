@@ -46,11 +46,17 @@
     </div>
   </section>
   {% endfor %}
-  <div class="col-md-10 offset-md-1 news-button">
+  <div class="container-fluid news-nav">
     {% if page.path == "index.html" %}
-      <a href="/news" role="button">More news</a>
+      <div class="row justify-content-end">
+        <div class="col-auto">
+          <a href="/news" role="button">More news</a>
+        </div>
+      </div>
     {% else %}
-      <a href="" role="button">More news</a>
+      <div class="row justify-content-center ">
+        <div class="col-auto">
+      </div>
     {% endif %}
   </div>
 </article>

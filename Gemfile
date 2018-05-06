@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem "jekyll-multiple-languages-plugin", "~> 1.5.0"
   #gem "jekyll-assets", "~> 3.0.7"
   gem "jekyll-assets", :git => "git://github.com/HouraiTeahouse/jekyll-assets.git"
+  gem "jekyll-paginate", "~> 1.1.0"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

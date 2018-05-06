@@ -36,6 +36,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-multiple-languages-plugin
+  - jekyll-paginate
 
 defaults:
   -
