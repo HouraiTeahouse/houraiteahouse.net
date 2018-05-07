@@ -18,7 +18,7 @@ twitter: HouraiTeahouse
 github: HouraiTeahouse
 
 # Pagination Settings
-paginate: 1
+paginate: 2
 paginate_path: "/news/page:num/"
 
 # Localization Settings

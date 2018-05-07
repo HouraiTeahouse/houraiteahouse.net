@@ -1,14 +1,9 @@
 <article class="container-fluid news">
+
   <header class="row news-header">
-    <h1 class="col-12">
-    {% if page.path == "news.md" %}
-      Hourai Teahouse - News
-    {% else %}
-      News
-    {% endif %}
-   </h1>
+    <h1 class="col-12">News</h1>
   </header>
-  {% for post in site.posts %}
+  {% for post in site.posts limit: 5 %}
   {% if post == site.posts[0] %}
   <section class="row news-post selected">
   {% else %}
@@ -23,8 +18,8 @@
         </div>
       </div>
     </div>
-    <div class="flex col-md-8 offset-md-2 h-100 news-post-border">
-      <div class="row w-100 align-items-end news-post-header">
+    <div class="col-md-8 offset-md-2 h-100 news-post-border">
+      <div class="row align-items-end news-post-header">
         <div class="col-md-auto news-post-title">
           <h1>
             <a href="{{ post.url }}">
@@ -46,18 +41,16 @@
     </div>
   </section>
   {% endfor %}
+
   <div class="container-fluid news-nav">
-    {% if page.path == "index.html" %}
-      <div class="row justify-content-end">
-        <div class="col-auto">
-          <a href="/news" role="button">More news</a>
-        </div>
+    <div class="row justify-content-end">
+      <div class="col-auto">
+        {% if site.lang == site.default_lang %}
+          <a href="{{ site.baseurl_root }}/news" role="button">More news</a>
+          {% else %}
+            <a href="{{ site.baseurl_root }}/{{ site.lang }}/news" role="button">More news</a>
+          {% endif %}
       </div>
-    {% else %}
-      <div class="row justify-content-center ">
-        <div class="col-auto">
-        </div>
-      </div>
-    {% endif %}
+    </div>
   </div>
 </article>
