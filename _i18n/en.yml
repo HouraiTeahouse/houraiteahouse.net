@@ -6,6 +6,14 @@ nav:
   faq: FAQ
   contribute: Contribute
   wiki: Wiki
+langs:
+  en: English
+  jp: Japanese
+  es: Spanish
+  fr: French
+  de: German
+titles:
+  pagination: Pagination
 en: English
 jp: Japanese
 es: Spanish

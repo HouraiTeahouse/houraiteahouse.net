@@ -17,6 +17,10 @@ facebook: HouraiTeahouse
 twitter: HouraiTeahouse
 github: HouraiTeahouse
 
+# Pagination Settings
+paginate: 1
+paginate_path: "/news/page:num/"
+
 # Localization Settings
 languages: ["en", "es", "fr", "de", "jp"]
 
