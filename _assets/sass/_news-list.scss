@@ -2,6 +2,9 @@
     a {
         color: $font-color-white;
         cursor: pointer;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .news-header {
@@ -82,10 +85,13 @@
     padding-bottom: 15px;
     align-content: flex-start;
     .news-post-title {
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
+        }
         h1 {
             font-size: 1.75rem;
         }
-        text-align: center;
     }
     .news-post-date {
         h2 {
