@@ -1,6 +1,75 @@
 ---
-layout: news
+layout: base
 pagination:
   enabled: true
 ---
-{% include news-list.html %}
+<article class="container-fluid news">
+
+  <header class="row news-header">
+    <h1 class="col-12">Hourai Teahouse - News</h1>
+  </header>
+
+  {% for post in paginator.posts %}
+      <section class="row news-post">
+      <div class="col-12 h-100 news-post-preview">
+        <div class="row h-100 overlay-wrapper">
+          <div class="col-12 no-gutter-left no-gutter-right post-background"></div>
+          <div class="col-md-auto h-100 no-gutter-left no-gutter-right image-border">
+            <div class="image-overlay"></div>
+            {% asset placeholder class="image" %}
+          </div>
+        </div>
+      </div>
+      <div class="flex col-md-8 offset-md-2 h-100 news-post-border">
+        <div class="row w-100 align-items-end news-post-header">
+          <div class="col-md-auto news-post-title">
+            <h1>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h1>
+          </div>
+          <div class="col-md-auto news-post-date">
+            <h2>
+              {{ post.date | date_to_long_string }}
+            </h2>
+          </div>
+        </div>
+        <div class="row news-post-details">
+          <div class="col-12">
+            <span>{{ post.excerpt }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+
+  {% if paginator.total_pages > 1 %}
+    <div class="container-fluid news-nav">
+      <div class="row justify-content-center">
+        <ul class="pagination">
+          {% if paginator.previous_page %}
+            <li class="page-item"><a class="page-link" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Previous</a></li>
+          {% else %}
+            <li class="page-item"><span class="page-link">Previous</span></li>
+          {% endif %}
+          {% for page in (1..paginator.total_pages) %}
+          <li class="page-item">
+          {% if page == paginator.page %}
+            <span class="page-link">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a class="page-link" href="{{ site.baseurl }}/{{ lang }}news">{{ page }}</a>
+          {% else %}
+            <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+          {% endfor %}
+          {% if paginator.next_page %}
+            <li class="page-item"><a class="page-link" href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next</a></li>
+          {% else %}
+            <li class="page-item"><span class="page-link">Next</span></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  {% endif %}
+</article>

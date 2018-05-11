@@ -8,11 +8,19 @@
           </button>
           <div class="dropdown-menu">
             {% for lang in site.languages %}
-            {% if lang == "en" %}
-            {% capture link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
-            {% else %}
-            {% capture link %}/{{ site.baseurl_root }}{{ lang }}{{ page.url}}{% endcapture %}
-            {% endif %}
+              {% if lang == "en" %}
+                {% if page.path contains "news" %}
+                  {% capture link %}{{ site.url }}{{ "/news" }}{% endcapture %}
+                {% else %}
+                  {% capture link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+                {% endif %}
+              {% else %}
+                {% if page.path contains "news" %}
+                  {% capture link %}{{ site.url }}/{{ lang }}{{ "/news" }}{% endcapture %}
+                {% else %}
+                  {% capture link %}/{{ site.baseurl_root }}{{ lang }}{{ page.url }}{% endcapture %}
+                {% endif %}
+              {% endif %}
             <a class="dropdown-item" href="{{ link }}">
               {% t `{{ lang }}` %}
             </a>

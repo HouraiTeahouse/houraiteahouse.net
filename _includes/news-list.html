@@ -1,19 +1,15 @@
 <article class="container-fluid news">
 
   <header class="row news-header">
-    {% if page.path=="index.html" %}
-      <h1 class="col-12">News</h1>
-    {% else %}
-      <h1 class="col-12">Hourai Teahouse - News</h1>
-    {% endif %}
+    <h1 class="col-12">News</h1>
   </header>
   
-  {% if page.path == "index.html" %}
-    {% for post in site.posts limit: 5 %}
+  {% for post in site.posts limit: 5 %}
+  {% if post == site.posts[0] %}
+  <section class="row news-post selected">
   {% else %}
-    {% for post in paginator.posts %}
-  {% endif %}
   <section class="row news-post">
+  {% endif %}
     <div class="col-12 h-100 news-post-preview">
       <div class="row h-100 overlay-wrapper">
         <div class="col-12 no-gutter-left no-gutter-right post-background"></div>
