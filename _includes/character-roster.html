@@ -7,7 +7,7 @@
       <li id="{{ roster_id }}" class="background-navy border-pink roster-character" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
     {% else %}
       <li id="{{ roster_id }}" class="roster-character-background border-navy roster-character" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
-    {% endif %}    
+    {% endif %}
     {% asset '{{ character.chibi_img }}' class="roster-image" %}
     </li>
   {% cycle 'close': '', '</ul>' %}
@@ -24,12 +24,12 @@
           <div id="{{ character.short_name }}" class="carousel-item">
         {% endif %}
           <div class="row">
-            <div class="col-md-4 roster-carousel-image">
+            <div class="col-md-5 roster-carousel-image">
               <div class="row h-100 justify-content-center">
                 {% asset '{{ character.chibi_img }}' class="roster-image" %}
               </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-7">
               <div class="row no-gutters">
                 <h2 class="roster-character-name">
                   {{ character.full_name }}

@@ -9,12 +9,6 @@ $color-fc: rgb(248, 71, 62);
 .background-fc {
     background-image: linear-gradient(180deg, $color-fc 60%, rgb(97, 28, 30));
 }
-.wrapper-fc {
-    > .container-fluid {
-        margin: 0;
-        padding: 0;
-    }
-}
 .fc-blurb {
     position: relative;
     padding-top: 5%;
