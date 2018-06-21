@@ -1,16 +1,25 @@
 ---
 layout: base
 ---
+
 <section class="container">
+  <header class="row faq-header">
+    <h1 class="">Frequently Asked Questions</h1>
+  </header>
   <div class="row">
-    <div class="col-10 offset-1">
-      <input class="faq-search" type="text" placeholder="search">
-    </div>
+    <ul class="col-auto faq-toc">
+    {% assign count = 1 %}
+    {% for frequent_question in site.data.faq %}
+      <li class="row no-gutters faq-toc-item" data-toggle="collapse" data-target="#collapse-{{ forloop.index }}" aria-expanded="false" aria-controls="collapse-{{ forloop.index }}"><a href="#entry-{{ count }}">{{ frequent_question.question }}</a></li>
+    {% assign count = count | plus: 1 %}
+    {% endfor %}
+    </ul>
   </div>
   <div class="row">
-    <div id="accordion" class="col-12">
+    <div id="accordion" class="col-12 no-gutter-left no-gutter-right">
+    {% assign count = 1 %}
     {% for frequent_question in site.data.faq %}
-      <div class="card faq-item border-black-thin">
+      <div id="entry-{{ count }}"class="card faq-entry">
         <div class="card-header faq-question" id="question-{{ forloop.index }}">
           <h5 class="mb-0 ">
             <button class="btn btn-link collapsed" data-toggle="collapse"
@@ -21,12 +30,13 @@ layout: base
           </h5>
         </div>
         <div id="collapse-{{ forloop.index }}" class="collapse"
-          aria-labelledby="question-{{ forloop.index}}" data-parent="#accordion">
+          aria-labelledby="question-{{ forloop.index }}" data-parent="#accordion">
           <div class="card-body">
             {{ frequent_question.answer }}
           </div>
         </div>
       </div>
+    {% assign count = count | plus: 1 %}
     {% endfor %}
     </div>
   </div>

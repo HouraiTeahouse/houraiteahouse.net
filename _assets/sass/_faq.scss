@@ -1,11 +1,25 @@
-.faq-search {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding: 5px;
-    width: 100%;
+.faq-header {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
     text-align: center;
+    border-bottom: 1px solid $border-pink;
+    h1 {
+        font-size: 2.25em;
+        font-weight: 700;
+    }
 }
-.faq-item {
+.faq-toc {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 25px;
+}
+.faq-toc-item {
+    padding-top: 10px;
+    & > a {
+        color: $font-color-white;
+    }
+}
+.faq-entry {
     margin-bottom: 25px;
     background: $background-darker-gray;
 }
