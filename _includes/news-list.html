@@ -1,9 +1,13 @@
+{% if page.path == "index.html" %}
+<article class="news">
+{% else %}
 <article class="container-fluid news">
+{% endif %}
 
   <header class="row news-header">
     <h1 class="col-12">News</h1>
   </header>
-  
+
   {% for post in site.posts limit: 5 %}
     <a href="{{ post.url }}">
       <section class="row news-post">
