@@ -9,59 +9,12 @@ layout: base
       <div class="col-md-6 contribute-desc">
         <div class="row">
           <div class="contribute-blurb">
-            <span>Community contributions continue to keep Hourai Teahouse's ticking.</span>
+            <span>Community contributions continue to keep Hourai Teahouse ticking.</span>
           </div>
         </div>
       </div>
       <div class="col-md-6 contribute-form">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="contribute-blurb">
-              <span>I want to contribute as...</span>
-            </div>
-          </div>
-          <div class="row contribute-form-roles justify-content-center">
-            <div class="col-sm-6 contribute-roles-button">
-              <button text="Programmer" class="red-gradient-bg border-navy">
-            </div>
-            <div class="col-sm-6 contribute-roles-button">
-              <button class="red-gradient-bg border-navy">Character Modeler</button>
-            </div>
-            <div class="col-sm-6 contribute-roles-button">
-              <button class="red-gradient-bg border-navy">Animator</button>
-            </div>
-            <div class="col-sm-6 contribute-roles-button">
-              <button class="red-gradient-bg border-navy">Musician</button>
-            </div>
-          </div>
-          <div class="row contribute-form-inputs justify-content-center">
-            <div class="col-lg-6 contribute-inputs-user">
-              <div class="row no-gutters justify-content-center">
-                <input id="discordUser" placeholder="Discord Username">
-              </div>
-            </div>
-            <div class="col-lg-6 contribute-inputs-user">
-              <div class="row no-gutters justify-content-center">
-                <input id="discordUser" placeholder="Github Username">
-              </div>
-            </div>
-          </div>
-          <div class="row border-thin-navy contribute-form-terms">
-            <div class="col-12 contribute-form-checkbox">
-              <div class="row align-content-center">
-                <input class="col-1" type="checkbox">
-                <div class="col-11">
-                  <span>I agree to Terms and Conditions *</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row contribute-form-submit">
-            <div class="col-auto contribute-submit-button no-gutter-left no-gutter-right">
-              <button class="background-pink">Submit</button>
-            </div>
-          </div>
-        </div>
+       {% include contribute-form.html %}
       </div>
       <div class="col-md-6 contribute-social">
         <div class="row justify-content-center">

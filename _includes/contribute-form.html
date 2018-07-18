@@ -1,0 +1,69 @@
+<form class="container-fluid" method="post" action="https://us-central1-houraiteahouse-emailclient.cloudfunctions.net/ContributionFormProcessor">
+  <div class="row">
+    <div class="contribute-blurb">
+      <span>I want to contribute as...</span>
+    </div>
+  </div>
+  <div class="row justify-content-center contribute-form-roles">
+    <div class="col-sm-6 contribute-roles-button">
+        <input type="checkbox" id="programmer" name="programmer" value="Programmer">
+        <div class="red-gradient-bg border-navy contribute-roles-label">
+          <label for="programmer" class="flex justify-content-center align-items-center">Programmer</label>
+        </div>
+    </div>
+    <div class="col-sm-6 contribute-roles-button">
+        <input type="checkbox" id="modeler" name="modeler" value="Character Modeler">
+        <div class="red-gradient-bg border-navy contribute-roles-label">
+          <label for="modeler" class="flex justify-content-center align-items-center">Character Modeler</label>
+        </div>
+    </div>
+    <div class="col-sm-6 contribute-roles-button">
+        <input type="checkbox" id="animator" name="animator" value="Animator">
+        <div class="red-gradient-bg border-navy contribute-roles-label">
+          <label for="animator" class="flex justify-content-center align-items-center">Animator</label>
+        </div>
+    </div>
+    <div class="col-sm-6 contribute-roles-button">
+        <input type="checkbox" id="musician" name="musician" value="Musician">
+        <div class="red-gradient-bg border-navy contribute-roles-label">
+          <label for="musician" class="flex justify-content-center align-items-center">Musician</label>
+        </div>
+    </div>
+  </div>
+  <div class="row justify-content-center contribute-form-inputs">
+    <div class="col-12 contribute-inputs-user">
+      <div class="row no-gutters">
+        <input id="email" name="email" placeholder="email*" required>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center contribute-form-inputs">
+    <div class="col-lg-6 contribute-inputs-user">
+      <div class="row no-gutters">
+        <input id="discordUser" name="discordUser" placeholder="Discord Username">
+      </div>
+    </div>
+    <div class="col-lg-6 contribute-inputs-user">
+      <div class="row no-gutters">
+        <input id="githubUser" name="githubUser" placeholder="Github Username">
+      </div>
+    </div>
+  </div>
+  <div class="row border-thin-navy contribute-form-terms">
+    <div class="col-12 contribute-form-checkbox">
+      <div class="row align-content-center">
+        <input type="checkbox" id="agreement" class="col-1" required>
+        <label for="agreement" class="col-11">I agree to <a href="https://docs.google.com/document/d/1vhoyxHvxNAOUrmaiueDuK588syzxxHAFnFzBiGGTslY/edit" target="_blank">Terms and Conditions</a>*</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <span style="font-size: 0.75em;">Note: Fields marked with "*" are required.</span>
+  </div>
+  <div class="row contribute-form-submit">
+    <div class="col-auto contribute-submit-button no-gutter-left no-gutter-right">
+      <button class="background-pink">Submit</button>
+    </div>
+  </div>
+</div>
+</form>

@@ -18,15 +18,25 @@
         padding: 10px;
     }
 }
-.contribute-form-roles {
-    .contribute-roles-button {
-        padding: 5px;
-    }
-    button {
-        padding: 10px;
-        width: 100%;
+.contribute-roles-button {
+    padding: 10px;
+    width: 100%;
+    color: $border-pink;
+    .contribute-roles-label {
+        @include no-select;
         height: 75px;
+    }
+    input {
+        display: none;
+    }
+    label {
+        text-align: center;
+        height: 100%;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked + .contribute-roles-label {
         color: $font-color-white;
+        border-color: $border-pink;
     }
 }
 .contribute-form-inputs {
