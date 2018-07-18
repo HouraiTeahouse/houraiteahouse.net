@@ -8,7 +8,7 @@
     {% else %}
       <li id="{{ roster_id }}" class="roster-character-background border-navy roster-character" data-target="#roster-carousel" data-slide-to="{{ character.index }}">
     {% endif %}
-    {% asset '{{ character.chibi_img }}' class="roster-image" %}
+    {% asset '{{ character.short_name }}' class="roster-image" %}
     </li>
   {% cycle 'close': '', '</ul>' %}
   {% endfor %}
@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-md-5 roster-carousel-image">
               <div class="row h-100 justify-content-center">
-                {% asset '{{ character.chibi_img }}' class="roster-image" %}
+                {% asset '{{ character.short_name }}' class="roster-image" %}
               </div>
             </div>
             <div class="col-md-7">

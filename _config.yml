@@ -28,6 +28,8 @@ languages: ["en", "es", "fr", "de", "jp"]
 assets:
   sources:
     - _assets/img
+    - _assets/img/fc
+    - _assets/img/fc/characters
     - _assets/css
     - _assets/sass
 

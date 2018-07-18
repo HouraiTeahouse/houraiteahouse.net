@@ -1,40 +1,32 @@
 - short_name: Reimu
   full_name: Reimu Hakurei
-  chibi_img: characters/chibis/reimu
   index: 0
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Marisa
   full_name: Marisa Kirisame
-  chibi_img: characters/chibis/marisa
   index: 1
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Youmu
   full_name: Youmu Konpaku
-  chibi_img: characters/chibis/youmu
   index: 2
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Sakuya
   full_name: Sakuya Izayoi
-  chibi_img: characters/chibis/sakuya
   index: 3
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Wriggle
   full_name: Wriggle Nightbug
-  chibi_img: characters/chibis/wriggle
   index: 4
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Yuuka
   full_name: Yuuka Kazami
-  chibi_img: characters/chibis/yuuka
   index: 5
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Yuugi
   full_name: Yuugi Hoshiguma
-  chibi_img: characters/chibis/yuugi
   index: 6
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
 - short_name: Murasa
   full_name: Minamitsu Murasa
-  chibi_img: characters/chibis/murasa
   index: 7
   description: Lorem ipsum dolor sit amet, facilisis voluptaria id mel, labores dolores ius at, eu eos quodsi feugait. Ei his modo ornatus verterem, debitis explicari sententiae no mel. Ei eam liber tollit sanctus. Eu mea nulla commodo vulputate.
